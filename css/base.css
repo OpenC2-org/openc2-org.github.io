@@ -42,7 +42,7 @@ h2 {
 }
 
 .main-content {
-	background: url('/img/net-diagram-medium.png') top center;
+	background: url('/public-website/img/net-diagram-medium.png') top center;
 }
 
 .row-summaries > div, 
@@ -55,7 +55,7 @@ h2 {
 .summary {
 	text-align: justify;
 	/* background-color: rgba(46, 49, 146, 0.9); */
-	background: #5d55be url('/img/blue-vertical-gradient.png') top left repeat-x;
+	background: #5d55be url('/public-website/img/blue-vertical-gradient.png') top left repeat-x;
 	color: #fff;
 	padding: 20px;
 }
