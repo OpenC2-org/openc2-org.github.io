@@ -1,0 +1,158 @@
+/* Colors from existing logo:
+	Green - #2bb673
+	Blue - #2e3192
+*/
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+}
+
+h1, h2, h3 {
+	text-align: center;
+}
+
+h2 {
+	margin-top: 50px;
+}
+
+.logo {
+	padding: 20px 0;
+}
+
+.logo > img {
+	display: block;
+	height: auto;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 500px;
+}
+
+.logo > h1 {
+	display: none;
+}
+
+.jumbotron {
+	text-align: center;
+}
+
+.main-content {
+	background: url('/img/net-diagram-medium.png') top center;
+}
+
+.row-summaries > div, 
+.row-scopes > div, 
+.row-features > div,
+.row-partners > div {
+	padding: 10px 10px;
+}
+
+.summary {
+	text-align: justify;
+	/* background-color: rgba(46, 49, 146, 0.9); */
+	background: #5d55be url('/img/blue-vertical-gradient.png') top left repeat-x;
+	color: #fff;
+	padding: 20px;
+}
+
+.scope {
+	text-align: justify;
+	background-color: rgba(255, 255, 255, 0.6);
+	color: #000;
+	padding: 20px;
+}
+
+.feature {
+	text-align: center;
+	background-color: rgba(43, 182, 115, 0.8);
+	color: #fff;
+	padding: 20px;
+}
+
+#partners {
+	background-color: rgba(255, 255, 255, 0.6);
+	padding: 20px;
+}
+
+.feature p {
+	text-align: justify;
+}
+
+.feature > span {
+	font-size: 5em;
+}
+
+.feature a:not(.btn) {
+	text-decoration: underline;
+	color: inherit;
+}
+
+.feature a:not(.btn):hover {
+	color: #ddd;
+}
+
+.feature .btn {
+	margin-top: 20px;
+}
+
+.feature code {
+}
+
+.feature pre {
+	text-align: left;
+}
+
+.feature ul {
+	list-style: none;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+
+	width: 75%;
+	margin: 0;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.feature ul li {
+}
+
+.feature ul:first-child {
+	margin-right: 10%;
+}
+
+.btn-primary {
+	background-color: #2e3192;
+	border-color: #2e3192;
+}
+
+.summary p > span.glyphicon {
+	font-size: 90px;
+	margin: 10px 20px 20px 20px;
+	float: left;
+}
+
+.summary h2 > em {
+	font-style: italic;
+}
+
+#current-defense-summary {
+}
+
+#future-defense-summary {
+}
+
+div#partner-orgs {
+	text-align: center;
+}
+
+div#partner-orgs a img {
+	height: 75px;
+	width: auto;
+	margin: 10px;
+}
