@@ -17,6 +17,28 @@ h1, h2, h3 {
 	text-align: center;
 }
 
+.navbar-collapse.collapse {
+	overflow: visible;
+}
+
+#navbar .dropdown {
+	float: left;
+}
+
+#navbar .dropdown a.btn {
+	height: 40px;
+	padding: 10px;
+	margin: 5px;
+	font-size: 16px;
+	line-height: 20px;
+	float: left;
+}
+
+#navbar .dropdown a.btn span {
+	font-size: 16px;
+	line-height: 20px;
+}
+
 .logo {
 	padding: 20px 0;
 }
@@ -152,3 +174,4 @@ div#partner-orgs a img {
 	width: auto;
 	margin: 10px;
 }
+
