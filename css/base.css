@@ -138,6 +138,8 @@ h1, h2, h3 {
 }
 
 .feature ul li {
+	text-align: left;
+	font-size: 12px;
 }
 
 .feature ul:first-child {
