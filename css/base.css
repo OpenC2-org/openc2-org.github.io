@@ -17,15 +17,31 @@ h1, h2, h3 {
 	text-align: center;
 }
 
+.navbar-inverse {
+	background-color: #fff;
+	border-bottom: none;
+}
+
 .navbar-collapse.collapse {
 	overflow: visible;
+}
+
+.nav-logo {
+	height: 50px;
+	width: auto;
+	margin-right: 25px;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #444;
+	background-color: #aaa;
 }
 
 #navbar .dropdown {
 	float: left;
 }
 
-#navbar .dropdown a.btn {
+#navbar a.btn {
 	float: left;
 	font-size: 16px;
 	line-height: 30px;
@@ -33,21 +49,22 @@ h1, h2, h3 {
 	padding: 4px 10px;
 }
 
-#navbar .dropdown a.btn span {
+#navbar a.btn span {
 	font-size: 16px;
 	line-height: 30px;
 }
 
-.logo {
-	padding: 20px 0;
+.navbar-toggle {
+	background-color: #444;
 }
 
-.logo > img {
-	display: block;
-	height: auto;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 500px;
+.dropdown-menu > li > a {
+	cursor: hand; cursor: pointer;
+}
+
+
+.logo {
+	padding: 20px 0;
 }
 
 .logo > h1 {
@@ -76,6 +93,10 @@ h1, h2, h3 {
 	background: #5d55be url('/img/blue-vertical-gradient.png') top left repeat-x;
 	color: #fff;
 	padding: 20px;
+}
+
+.row-about {
+	text-align: center;
 }
 
 .scope {
@@ -146,9 +167,17 @@ h1, h2, h3 {
 	margin-right: 10%;
 }
 
-.btn-primary {
+#navbar .btn-primary {
 	background-color: #2e3192;
 	border-color: #2e3192;
+}
+
+#navbar .btn-primary:focus, 
+#navbar .btn-primary:active {
+}
+
+#navbar .btn-primary:hover {
+	background-color: #4e51b2;
 }
 
 .summary p > span.glyphicon {
@@ -175,5 +204,9 @@ div#partner-orgs a img {
 	height: 75px;
 	width: auto;
 	margin: 10px;
+}
+
+.modal-body > img {
+	width: 125%;
 }
 

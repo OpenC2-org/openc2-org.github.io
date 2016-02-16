@@ -30,33 +30,46 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#top-content">OpenC2</a>
+					<a href="#top-content"><img class="nav-logo" src='/img/openc2-logo.png' /></a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
-					<a class="navbar-brand" href="#why">Why?</a>
-					<a class="navbar-brand" href="#scope">Scope</a>
-					<a class="navbar-brand" href="#details">Details</a>
-					<a class="navbar-brand" href="#partners">Partners</a>
+					<div class="dropdown">
+						<a class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-file"></span> Language <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a data-toggle="modal" data-target="#designModal">Design Principles</a></li>
+							<li><a data-toggle="modal" data-target="#syntaxModal">Syntax</a></li>
+							<li><a data-toggle="modal" data-target="#actionsModal">Actions</a></li>
+							<li><a data-toggle="modal" data-target="#targetsModal">Targets</a></li>
+							<li><a data-toggle="modal" data-target="#actuatorsModal">Actuators</a></li>
+							<li><a data-toggle="modal" data-target="#specifiersModal">Specifiers</a></li>
+							<li><a data-toggle="modal" data-target="#modifiersModal">Modifiers</a></li>
+						</ul>
+					</div>
+					<div class="dropdown">
+						<a class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-file"></span> Documentation <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">OpenC2 Overview</a></li>
+							<li><a href="#">OpenC2 Language Description Document</a></li>
+							<li><a href="#">Use Cases</a></li>
+						</ul>
+					</div>
+					<div class="dropdown">
+						<a class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-cog"></span> Examples <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Example 1</a></li>
+							<li><a href="#">Example 2</a></li>
+						</ul>
+					</div>
+
+					<a class="btn btn-primary" href="#">About</a>
 
 					<div class="navbar-right">
-						<div class="dropdown">
-							<a class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-								<span class="glyphicon glyphicon-file"></span> Briefings <span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Overview</a></li>
-								<li><a href="#">Neil</a></li>
-							</ul>
-						</div>
-						<div class="dropdown">
-							<a class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-								<span class="glyphicon glyphicon-cog"></span> Examples <span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Example 1</a></li>
-								<li><a href="#">Example 2</a></li>
-							</ul>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -66,7 +79,6 @@
 			<div class="row">
 				<div id="logo" class="col-md-12 logo">
 					<h1>OpenC2</h1>
-					<img src='/img/openc2-logo.png' />
 				</div>
 			</div>
 		</div>
@@ -76,9 +88,6 @@
 			<div class="container">
 				<h2>Open Command and Control (OpenC2)</h2>
 				<p>Cyber-attacks are increasing in terms of sophistication, speed and dynamics of the attack steps.  Advanced cyber actors are utilizing automation with polymorphic attack steps and these trends are likely to continue.</p>
-
-
-
 			</div>
 
 			<div id="why" class="container">
@@ -94,31 +103,50 @@
 							<h3>Defense in <em>Cyber-Relevant</em> Time</h3>
 							<p><span class="glyphicon glyphicon-flash"></span>Future defenses will require the sharing of indicators, the coordination of responses between domains, synchronization of cyber defense mechanisms, and automated actions at machine speed against current and pending attacks.</p>
 
-							<p>Key enablers for the realization of more flexible and interoperable cyber defense components include the standardization of interfaces and protocols to facilitate interoperability and enable unambiguous machine to machine command and control messages.</p>
+							<p>Standardizing the language used in machine-to-machine command and control communications and designing interfaces and protocols where necessary will enable cyber defense system flexibility and interoperability.</p>
 						</div>
 					</div>
 				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<p>The Open Command and Control Forum promotes the global development and adoption of the OpenC2 language and reference material.</p>
+						<p>The goal of the Forum is to serve developers, users, and the entire cybersecurity ecosystem by providing a set of shared resources to expand the use of standardized command and control for cyber defense activities, to enable technology vendors building orchestration and cyber response technologies, and to assist developers in producing response technologies that can be readily used in coordinated responses.</p>
+					</div>
+				</div>
+
 			</div>
+
+			
 		</div>
 
 
 
 		<div class="main-content">
-			<div id="scope" class="container">
-				<h2>What is OpenC2's approach?</h2>
+			<div id="about" class="container">
+				<h2>About</h2>
+				<div class="row row-about">
+					<div class="col-md-12">
+						<p>The Open Command and Control Forum promotes the global development and adoption of the OpenC2 language and reference material.</p>
+
+						<p>What is the OpenC2 Approach?</p>
+					</div>
+				</div>
+
 				<div class="row row-scopes">
 					<div class="col-md-6">
 						<div class="scope">
 							<h3>Initial Scope</h3>
-							<p>OpenC2.org is initially focused on defining a language at a level of abstraction that will enable command and control of cyber defense entities that execute the actions with enough generality to provide flexibility in the implementations of devices and accommodate future products.</p>
-							<p>The initial  scope of the OpenC2.org effort is to create a lexicon with a  set of terms that define the actions, the target of the actions, and the entities that execute the action.  The OpenC2 language also defines an extensible syntax to accommodate attributes that further specify the targets, components, and actions that support a wide range of operational environments.</p>
+							<p>The OpenC2 Forum is initially focused on defining a language at a level of abstraction that will enable command and control of cyber defense entities that execute the actions with enough generality to provide flexibility in the implementations of devices and accommodate future products.</p>
+
+							<p>The initial scope of the OpenC2 effort is to create a lexicon with a set of terms that define the actions, the target of the actions, and the entities that execute the action. The OpenC2 language also defines an extensible syntax to accommodate attributes that further specify the targets, components, and actions that support a wide range of operational environments.</p>
 
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="scope">
 							<h3>Future Scope</h3>
-							<p>Future OpenC2.org efforts will further detail the syntax, lock down the controlled vocabulary, and define implementation  approaches to facilitate interoperable machine to machine communications.  The OpenC2.org effort will develop and promulgate reference implementations to demonstrate the use and flexibility of OpenC2 and promote the incorporation of OpenC2 in cyber defense solutions. </p>
+							<p>Future OpenC2 efforts will further detail the syntax, lock down the controlled vocabulary, and define implementation  approaches to facilitate interoperable machine to machine communications. The OpenC2 effort will develop and promulgate reference implementations to demonstrate the use and flexibility of OpenC2 and promote the incorporation of OpenC2 in cyber defense solutions.</p>
 						</div>
 					</div>
 				</div>
@@ -198,6 +226,7 @@
 				</div>
 			</div>
 
+<!--
 			<div id="partners" class="container">
 				<h2>Partners</h2>
 				<div class="row row-partners">
@@ -207,12 +236,209 @@
 					</div>
 				</div>
 			<div>
-
+-->
 			<hr>
 
 			<footer>
 				<p>&copy; 2015 Company, Inc.</p>
 			</footer>
+		</div>
+
+
+
+		<!-- ============================== Modal popups ============================== -->
+
+		<div id="designModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Design Principles</h4>
+					</div>
+					<div class="modal-body">
+						<p>Cyber attacks operate at machine speed. Effective responses to attacks must operate at machine speed.  Security solutions must not only be faster and smarter, they must be able to work together to create a concerted automatic cyber defense. This coordinated defensive activity requires that there be a commonly understood way to express system actions. OpenC2 is an open standards approach to translating the operational and defensive intent of an organization into orchestrated and automated system control actions.</p>
+
+						<p>A command set and syntax, OpenC2, based on the actions, targets, actuators, and attributes required to encode desired effect and command decisions as machine-readable instructions to enable automated courses of action has been defined.  The expressiveness of the language can be expanded in a context-specific way by adding attributes and objects to further specify the general activities. This strategy achieves broad interoperability while only standardizing and maintaining a small set of actions.</p>
+
+						<p>The definition of a language such as OpenC2 is necessary but insufficient to enable future cyber defenses.  OpenC2 was designed to be flexible, agnostic of external protocols that provide services such as transport, authentication, key management and other services. </p>
+
+						<hr />
+
+						<p>The OpenC2 design principles include the following:</p>
+
+						<ul>
+							<li>Support cyber relevant response time for coordination and response actions.
+							<li>Independent of infrastructure/architecture.
+							<li>Multiple, different levels of abstraction.
+							<li>Commands invoke are either tasking/response actions or notifications
+								<ul>
+									<li>Tasking/response actions result in a state change.
+									<li>Notifications require supporting analytics/decision processes.
+								</ul>
+							<li>Universally understood but support context/environment specific cases
+							<li>Commands are extensible to accommodate different types of actuators or specific actuators (e.g., sensor, endpoint, network device, human)
+							<li>Commands require but are independent of a message construct that provides transport, includes identification of priority/ quality of service, and supports security attributes.
+						</ul>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- ============================== Modal popups ============================== -->
+
+		<div id="syntaxModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Syntax</h4>
+					</div>
+					<div class="modal-body">
+						<p>Conceptually, an OpenC2 command has the following form:</p>
+
+						<pre><code>
+&lt;ACTION&gt; (
+  TARGET (
+    type = &lt;TARGET_TYPE&gt;,
+      [&lt;target-specifier&gt;]
+  ),
+  [ACTUATOR (
+    type = &lt;ACTUATOR_TYPE&gt;,
+      [&lt;actuator-specifier&gt;]
+  )],
+  [&lt;modifiers&gt;]
+)
+						</code></pre>
+
+						<h5>ACTION (‘The Verb’)</h5>
+						<ul>
+							<li>What is to be done</li>
+							<li>All OpenC2 commands have an Action</li>
+						</ul>
+
+						<h5>TARGET (‘The Object’)</h5>
+						<ul>
+							<li>What is affected by the ACTION</li>
+							<li>All OpenC2 commands have a target</li>
+						</ul>
+
+						<h5>ACTUATOR (‘The Subject’)</h5>
+						<ul>
+							<li>What is executing the ACTION on the TARGET</li>
+							<li>Optional In Higher Level Commands</li>
+						</ul>
+
+						<h5><i>Specifiers</i></h5>
+						<ul>
+							<li>Further identify TARGET(s) and ACTUATOR(s)</li>
+						</ul>
+
+						<h5><i>Modifiers</i></h5>
+						<ul>
+							<li>Provide additional information for the ACTION (optional)</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- ============================== Modal popups ============================== -->
+
+		<div id="actionsModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Actions</h4>
+					</div>
+					<div class="modal-body">
+						<p>All OpenC2 commands start with an ACTION which indicates the type of command to perform such as gather and convey information, control activities and devices, and control permissions and access.  The range of options and potential impact on the information system associated with a particular ACTION is a function of the ACTUATOR.  For cases that involve multiple options for an ACTION, modifiers are used.</p>
+
+						<img src="/img/actions.png" />
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- ============================== Modal popups ============================== -->
+
+		<div id="targetsModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Targets</h4>
+					</div>
+					<div class="modal-body">
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- ============================== Modal popups ============================== -->
+
+		<div id="actuatorsModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Actuators</h4>
+					</div>
+					<div class="modal-body">
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- ============================== Modal popups ============================== -->
+
+		<div id="specifiersModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Specifiers</h4>
+					</div>
+					<div class="modal-body">
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- ============================== Modal popups ============================== -->
+
+		<div id="modifiersModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Modifiers</h4>
+					</div>
+					<div class="modal-body">
+					</div>
+				</div>
+
+			</div>
 		</div>
 
 
