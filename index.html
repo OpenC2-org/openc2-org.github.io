@@ -41,6 +41,7 @@
 							<li><a data-toggle="modal" data-target="#designModal">Design Principles</a></li>
 							<li><a data-toggle="modal" data-target="#syntaxModal">Syntax</a></li>
 							<li><a data-toggle="modal" data-target="#actionsModal">Actions</a></li>
+							<li><a data-toggle="modal" data-target="#actionsDefModal">Actions Definitions</a></li>
 							<li><a data-toggle="modal" data-target="#targetsModal">Targets</a></li>
 							<li><a data-toggle="modal" data-target="#actuatorsModal">Actuators</a></li>
 							<li><a data-toggle="modal" data-target="#specifiersModal">Specifiers</a></li>
@@ -152,69 +153,8 @@
 				</div>
 
 				<div id="details" class="row row-features">
-					<h2>Some technical stuff...</h2>
-					<div class="col-md-4">
-						<div class="feature">
-							<span class="glyphicon glyphicon-move" aria-hidden="true"></span>
-							<h3>Simplified Actions</h3>
-							<ul>
-								<li>SCAN</li>
-								<li>LOCATE</li>
-								<li>QUERY</li>
-								<li>REPORT</li>
-								<li>GET</li>
-								<li>NOTIFY</li>
-								<li>DENY</li>
-								<li>CONTAIN</li>
-								<li>ALLOW</li>
-								<li>START</li>
-								<li>STOP</li>
-								<li>RESTART</li>
-								<li>PAUSE</li>
-								<li>RESUME</li>
-								<li>SET</li>
-								<li>UPDATE</li>
-								<li>MOVE</li>
-								<li>REDIRECT</li>
-								<li>DELETE</li>
-								<li>SNAPSHOT</li>
-								<li>DETONATE</li>
-								<li>RESTORE</li>
-								<li>SAVE</li>
-								<li>MODIFY</li>
-								<li>THROTTLE</li>
-								<li>DELAY</li>
-								<li>SUBSTITUTE</li>
-								<li>COPY</li>
-								<li>SYNC</li>
-								<li>DISTILL</li>
-								<li>AUGMENT</li>
-								<li>INVESTIGATE</li>
-								<li>MITGATE</li>
-								<li>REMEDIATE</li>
-							</ul>
-							<a class="btn btn-default" href="#" role="button">What They Do &raquo;</a>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="feature">
-							<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-							<h3>Abstract Syntax</h3>
+					<div class="col-md-4">&nbsp;</div>
 
-<pre><code>&lt;ACTION&gt; (
-  TARGET (
-    type = &lt;TARGET_TYPE&gt;,
-      [&lt;target-specifier&gt;]
-  ),
-  [ACTUATOR (
-    type = &lt;ACTUATOR_TYPE&gt;,
-      [&lt;actuator-specifier&gt;]
-  )],
-  [&lt;modifiers&gt;]
-)</code></pre>
-							<a class="btn btn-default" href="#" role="button">How It Works &raquo;</a>
-						</div>
-					</div>
 					<div class="col-md-4">
 						<div class="feature">
 							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
@@ -223,20 +163,11 @@
 							<p>Contact us at <a href="emailto://info@OpenC2.org">info@OpenC2.org</a> and we will provide you our charter and membership agreement.</p>
 						</div>
 					</div>
+
+					<div class="col-md-4">&nbsp;</div>
 				</div>
 			</div>
 
-<!--
-			<div id="partners" class="container">
-				<h2>Partners</h2>
-				<div class="row row-partners">
-					<div class="col-md-12" id="partner-orgs">
-						<a href="http://www.g2-inc.com"><img src="/img/logos/g2-logo.png" /></a>
-						<a href="http://www.generaldynamics.com/"><img src="/img/logos/general-dynamics-logo.jpg" /></a>
-					</div>
-				</div>
-			<div>
--->
 			<hr>
 
 			<footer>
@@ -372,6 +303,149 @@
 
 		<!-- ============================== Modal popups ============================== -->
 
+		<div id="actionsDefModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Actions Definitions</h4>
+					</div>
+					<div class="modal-body">
+						<h5>Actions that Gather and Convey Information</h5>
+						<dl>
+							<dt>SCAN</dt>
+							<dd>The SCAN action is the systematic examination of some aspect of the entity or its environment in order to obtain information.</dd>
+
+							<dt>LOCATE</dt>
+							<dd>The LOCATE action is used to find an object either physically, logically, functionally, or by organization.  This action enables one to tell where in the system an event or trigger occurred.</dd>
+
+							<dt>QUERY</dt>
+							<dd>The QUERY action initiates a single request for information.</dd>
+
+							<dt>REPORT</dt>
+							<dd>The REPORT action tasks an entity to provide information to a designated recipient of the information.</dd>
+
+							<dt>GET</dt>
+							<dd>The GET action tasks an entity to retrieve a specific object.</dd>
+
+							<dt>NOTIFY</dt>
+							<dd>The NOTIFY action is used to direct an entity to send information to another entity.</dd>
+						</dl>
+
+						<h5>Actions that Control Permissions</h5>
+						<dl>
+							<dt>DENY</dt>
+							<dd>The DENY action is used to prevent a certain event or action from completion, such as preventing a flow from reaching a destination (e.g., block) or preventing access.</dd>
+							
+							<dt>CONTAIN</dt>
+							<dd>The CONTAIN action stipulates the isolation of a file or process or entity such that it cannot modify or access assets, processes or other  that support the business and/or operations of the enclave. </dd>
+							
+							<dt>ALLOW</dt>
+							<dd>The ALLOW action permits the access to or execution of something.</dd>
+						</dl>
+
+						<h5>Actions that Control Activities/Devices</h5>
+						<dl>
+							<dt>START</dt>
+							<dd>The START action initiates a process, application, system or some other activity. </dd>
+							
+							<dt>STOP</dt>
+							<dd>The STOP action halts a system or ends an activity.</dd>
+							
+							<dt>RESTART</dt>
+							<dd>The RESTART action conducts a STOP of a system or an activity followed by a START of a system or an activity.</dd>
+							
+							<dt>PAUSE</dt>
+							<dd>The PAUSE action ceases a system or activity while maintaining state.</dd>
+							
+							<dt>RESUME</dt>
+							<dd>The RESUME action starts a system or activity from a paused state.</dd>
+							
+							<dt>SET</dt>
+							<dd>The SET action changes a value, configuration, or state of a managed entity within an IT system.</dd>
+							
+							<dt>UPDATE</dt>
+							<dd>The UPDATE action instructs the component to retrieve and process a large or comprehensive software update, reconfiguration, or some other update.</dd>
+							
+							<dt>MOVE</dt>
+							<dd>The MOVE action changes the location of a file, subnet, network, or, process.</dd>
+							
+							<dt>REDIRECT</dt>
+							<dd>The REDIRECT action changes the flow of traffic to a particular destination other than its original intended destination.</dd>
+							
+							<dt>DELETE</dt>
+							<dd>The DELETE action removes data and files.</dd>
+							
+							<dt>SNAPSHOT</dt>
+							<dd>The SNAPSHOT action records and stores the state of a target at an instant in time.</dd>
+							
+							<dt>DETONATE</dt>
+							<dd>The DETONATE action executes and observes the behavior of an object (e.g., file, hyperlink) in a manner that isolates the object from assets that support the business or operations of the enclave.</dd>
+							
+							<dt>RESTORE</dt>
+							<dd>The RESTORE action deletes and/or replaces files, settings, or attributes such that the state of the system is identical to its state at some previous time.</dd>
+							
+							<dt>SAVE</dt>
+							<dd>The SAVE action commits data or system state to memory.</dd>
+							
+							<dt>MODIFY</dt>
+							<dd>The MODIFY action augments, enhances, transforms, or changes some aspect of a system.</dd>
+							
+							<dt>THROTTLE</dt>
+							<dd>The THROTTLE action adjusts the throughput of entire data flow to a different  rate.</dd>
+							
+							<dt>DELAY</dt>
+							<dd>The DELAY action stops or holds up an activity or data transmittal.</dd>
+							
+							<dt>SUBSTITUTE</dt>
+							<dd>The SUBSTITUTE action replaces all or part of the data, content or payload in the least detectable manner.</dd>
+							
+							<dt>COPY</dt>
+							<dd>The COPY action duplicates a file or data flow.</dd>
+							
+							<dt>SYNC</dt>
+							<dd>The SYNC action synchronizes a sensor or actuator with other system components.</dd>
+						</dl>
+
+						<h5>Sensor-Related Actions</h5>
+						<dl>
+							<dt>DISTILL</dt>
+							<dd>The DISTILL action tasks the sensor to send a summary or abstraction of the sensing information instead of the raw data feed.</dd>
+
+							<dt>AUGMENT</dt>
+							<dd>The AUGMENT action tasks the sensor to do a level of preprocessing or sense making prior to sending the sensor data.</dd>
+						</dl>
+
+						<h5></h5>
+						<dl>
+							<dt>INVESTIGATE</dt>
+							<dd>The INVESTIGATE action tasks the recipient enclave to aggregate and report information as it pertains to an anomaly.</dd>
+
+							<dt>MITIGATE</dt>
+							<dd>The MITIGATE action tasks the recipient enclave to circumvent the problem without necessarily eliminating the vulnerability or attack point.<br />Mitigate implies that the impacts to the enclave’s operations should be minimized while addressing the issue.</dd>
+
+							<dt>REMEDIATE</dt>
+							<dd>The REMEDIATE action tasks the recipient enclave to eliminate the vulnerability or attack point.<br />Remediate implies that addressing the issue is paramount.</dd>
+						</dl>
+
+						<h5>Response</h5>
+						<dl>
+							<dt>RESPONSE</dt>
+							<dd>RESPONSE is used to provide any data requested as a result of an action. RESPONSE can be used to signal the acknowledgement of an action, provide the status of an action along with additional information related to the requested action, or signal the completion of the action.</dd>
+						</dl>
+
+
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- ============================== Modal popups ============================== -->
+
 		<div id="targetsModal" class="modal fade" role="dialog">
 			<div class="modal-dialog">
 
@@ -399,6 +473,9 @@
 						<h4 class="modal-title">Actuators</h4>
 					</div>
 					<div class="modal-body">
+						<p>An ACTUATOR  is the entity that puts command and control into motion or action. The ACTUATOR is the subject of the ACTION which performs the ACTION to the TARGET. There are varying levels of abstraction and functionality for an ACTUATOR ranging from a specific sensor to an entire system or even system of systems.</p>
+
+						<p>There will be only one ACTUATOR type per OpenC2 command. OpenC2 will leverage the data models utilized by the Secure Automation and Configuration Management (SACM) working group and the ISCM taxonomy to the greatest extent practical.</p>
 					</div>
 				</div>
 
@@ -417,6 +494,7 @@
 						<h4 class="modal-title">Specifiers</h4>
 					</div>
 					<div class="modal-body">
+						<p>"Specifiers" further distinguish individual or groups of targets or actuators. Specifiers can be associated with the TARGET or ACTUATOR in an OpenC2 command. Commands are appended with specifiers as context specific details become available.</p>
 					</div>
 				</div>
 
@@ -435,6 +513,9 @@
 						<h4 class="modal-title">Modifiers</h4>
 					</div>
 					<div class="modal-body">
+						<p>"Modifiers" provide additional information about the action such as time, periodicity, duration, and location. Modifiers can denote the when, where, and how aspects of an action.  Modifiers are similar to specifiers in that they can provide additional context specific details, and are intended to provide additional details for action/actuator pairs.</p>
+
+						<p>The modifier can also be used to convey the need for additional status information about the execution of an action.  Modifiers can be used to indicate whether the actuator should explicitly acknowledge receipt of the command, respond upon completion of the execution of the command, or provide some other status information.</p>
 					</div>
 				</div>
 

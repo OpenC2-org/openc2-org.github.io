@@ -11,6 +11,8 @@ html {
 body {
 	height: 100%;
 	width: 100%;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
 }
 
 h1, h2, h3 {
@@ -50,8 +52,6 @@ h1, h2, h3 {
 }
 
 #navbar a.btn span {
-	font-size: 16px;
-	line-height: 30px;
 }
 
 .navbar-toggle {
@@ -208,5 +208,28 @@ div#partner-orgs a img {
 
 .modal-body > img {
 	width: 125%;
+}
+
+.modal-body h5 {
+	color: #fff;
+	background-color: #2e3192;
+	padding: 15px;
+}
+
+.modal-body dl {
+	padding: 5px;
+}
+
+.modal-body dt {
+	float: left;
+	clear: left;
+	width: 100px;
+	text-align: right;
+	font-weight: bold;
+}
+
+.modal-body dd {
+	margin: 0 0 0 110px;
+	padding: 0 0 5px 0;
 }
 
