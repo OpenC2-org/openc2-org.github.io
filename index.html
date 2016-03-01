@@ -53,22 +53,14 @@
 							<span class="glyphicon glyphicon-file"></span> Documentation <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="#">OpenC2 Overview</a></li>
+							<li><a target="_blank" href="/docs/OpenC2%20Effort%20Overview%20Base%2016%20Feb%202016.pdf">OpenC2 Effort Overview</a></li>
 							<li><a href="#">OpenC2 Language Description Document</a></li>
 							<li><a href="#">Use Cases</a></li>
 						</ul>
 					</div>
-					<div class="dropdown">
-						<a class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-							<span class="glyphicon glyphicon-cog"></span> Examples <span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Example 1</a></li>
-							<li><a href="#">Example 2</a></li>
-						</ul>
-					</div>
 
-					<a class="btn btn-primary" href="#">About</a>
+					<a class="btn btn-primary" data-toggle="modal" data-target="#examplesModal"><span class="glyphicon glyphicon-cog"></span> Reference Implementations</span></a>
+					<a class="btn btn-primary" data-toggle="modal" data-target="#aboutModal">About</a>
 
 					<div class="navbar-right">
 					</div>
@@ -125,33 +117,6 @@
 
 		<div class="main-content">
 			<div id="about" class="container">
-				<h2>About</h2>
-				<div class="row row-about">
-					<div class="col-md-12">
-						<p>The Open Command and Control Forum promotes the global development and adoption of the OpenC2 language and reference material.</p>
-
-						<p>What is the OpenC2 Approach?</p>
-					</div>
-				</div>
-
-				<div class="row row-scopes">
-					<div class="col-md-6">
-						<div class="scope">
-							<h3>Initial Scope</h3>
-							<p>The OpenC2 Forum is initially focused on defining a language at a level of abstraction that will enable command and control of cyber defense entities that execute the actions with enough generality to provide flexibility in the implementations of devices and accommodate future products.</p>
-
-							<p>The initial scope of the OpenC2 effort is to create a lexicon with a set of terms that define the actions, the target of the actions, and the entities that execute the action. The OpenC2 language also defines an extensible syntax to accommodate attributes that further specify the targets, components, and actions that support a wide range of operational environments.</p>
-
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="scope">
-							<h3>Future Scope</h3>
-							<p>Future OpenC2 efforts will further detail the syntax, lock down the controlled vocabulary, and define implementation  approaches to facilitate interoperable machine to machine communications. The OpenC2 effort will develop and promulgate reference implementations to demonstrate the use and flexibility of OpenC2 and promote the incorporation of OpenC2 in cyber defense solutions.</p>
-						</div>
-					</div>
-				</div>
-
 				<div id="details" class="row row-features">
 					<div class="col-md-4">&nbsp;</div>
 
@@ -160,7 +125,7 @@
 							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
 							<h3>Join</h3>
 							<p>If you are an organization looking to implement automated pre-approved cyber defensive measures or an orchestration, network component or services, endpoint, application, security services vendor providing cyber defensive, consider joining OpenC2.org.</p>
-							<p>Contact us at <a href="emailto://info@OpenC2.org">info@OpenC2.org</a> and we will provide you our charter and membership agreement.</p>
+							<p>Contact us at <a href="emailto://info@OpenC2.org">info@OpenC2.org</a> and we will provide you with our charter and membership agreement.</p>
 						</div>
 					</div>
 
@@ -266,7 +231,7 @@
 
 						<h5><i>Specifiers</i></h5>
 						<ul>
-							<li>Further identify TARGET(s) and ACTUATOR(s)</li>
+							<li>Further identify TARGET or ACTUATOR (optional)</li>
 						</ul>
 
 						<h5><i>Modifiers</i></h5>
@@ -417,7 +382,7 @@
 							<dd>The AUGMENT action tasks the sensor to do a level of preprocessing or sense making prior to sending the sensor data.</dd>
 						</dl>
 
-						<h5></h5>
+						<h5>Effects-Based Actions</h5>
 						<dl>
 							<dt>INVESTIGATE</dt>
 							<dd>The INVESTIGATE action tasks the recipient enclave to aggregate and report information as it pertains to an anomaly.</dd>
@@ -455,6 +420,7 @@
 						<h4 class="modal-title">Targets</h4>
 					</div>
 					<div class="modal-body">
+						<p>The TARGET is the object of the ACTION (or conversely, the ACTION is performed on the TARGET).  Targets include objects such as network connections, URLs, hashes, IP addresses, files, processes, and domains. There will be only one TARGET type per OpenC2 command. OpenC2 Targets will reference CybOX objects to the greatest extent practical.</p>
 					</div>
 				</div>
 
@@ -522,7 +488,174 @@
 			</div>
 		</div>
 
+		
+		<!-- ============================== Modal popups ============================== -->
 
+		<div id="aboutModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">About</h4>
+					</div>
+					<div class="modal-body">
+						<div class="row row-about">
+							<div class="col-md-12">
+								<p>The Open Command and Control Forum promotes the global development and adoption of the OpenC2 language and reference material.</p>
+
+								<p>What is the OpenC2 Approach?</p>
+							</div>
+						</div>
+
+						<div class="row row-scopes">
+							<div class="col-md-6">
+								<div class="scope">
+									<h5>Initial Scope</h5>
+									<p>The OpenC2 Forum is initially focused on defining a language at a level of abstraction that will enable command and control of cyber defense entities that execute the actions with enough generality to provide flexibility in the implementations of devices and accommodate future products.</p>
+
+									<p>The initial scope of the OpenC2 effort is to create a lexicon with a set of terms that define the actions, the target of the actions, and the entities that execute the action. The OpenC2 language also defines an extensible syntax to accommodate attributes that further specify the targets, components, and actions that support a wide range of operational environments.</p>
+
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="scope">
+									<h5>Future Scope</h5>
+									<p>Future OpenC2 efforts will further detail the syntax, lock down the controlled vocabulary, and define implementation  approaches to facilitate interoperable machine to machine communications. The OpenC2 effort will develop and promulgate reference implementations to demonstrate the use and flexibility of OpenC2 and promote the incorporation of OpenC2 in cyber defense solutions.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ============================== Modal popups ============================== -->
+
+		<div id="examplesModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Reference Implementation</h4>
+					</div>
+					<div class="modal-body">
+						<p>The expressiveness of the language can be expanded in a context-specific way by adding attributes and objects to further specify the general activities. This strategy achieves broad interoperability while only standardizing and maintaining a small set of actions.</p>
+						<table>
+							<thead>
+								<tr>
+									<th>Description</th>
+									<th>Action</th>
+									<th>
+										<table>
+											<tr><th>Target</th></tr>
+											<tr><td>Target-Specifier</td></tr>
+										</table>
+									</th>
+									<th>
+										<table>
+											<tr><th>Actuator</th></tr>
+											<tr><td>Actuator-specifier</td></tr>
+										</table>
+									</th>
+									<th>Modifier</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><span>Block traffic to/from specific IP address</span> [effects-based, no actuator specified]; suitable for inter-domain coordination</td>
+									<td>Deny</td>
+									<td>
+										<table>
+											<tr><th>Network Connection</th></tr>
+											<tr><td>Source and Destination IP Address</td></tr>
+										</table>
+									</td>
+									<td>
+										<table>
+											<tr><th></th></tr>
+											<tr><td></td></tr>
+										</table>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><span>Block traffic at all network devices</span> [specify actuator class]; suitable for inter-domain coordination or as a command to an orchestration engine which further contextualizes for the enclave’s environment</td>
+									<td>Deny</td>
+									<td>
+										<table>
+											<tr><th>Network Connection</th></tr>
+											<tr><td>Source and Destination IP Address</td></tr>
+										</table>
+									</td>
+									<td>
+										<table>
+											<tr><th>Network (any devices)</th></tr>
+											<tr><td></td></tr>
+										</table>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><span>Block traffic at network routers</span> [specify type of network device actuator]; suitable within an enclave</td>
+									<td>Deny</td>
+									<td>
+										<table>
+											<tr><th>IP</th></tr>
+											<tr><td>Source and Destination IP Address</td></tr>
+										</table>
+									</td>
+									<td>
+										<table>
+											<tr><th>Network.router</th></tr>
+											<tr><td>(optional)</td></tr>
+										</table>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><span>Block traffic</span> at specific network router; suitable within an enclave</td>
+									<td>Deny</td>
+									<td>
+										<table>
+											<tr><th>IP</th></tr>
+											<tr><td>Source and Destination IP Address</td></tr>
+										</table>
+									</td>
+									<td>
+										<table>
+											<tr><th>Network.router</th></tr>
+											<tr><td>Router identity</td></tr>
+										</table>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><span>Block access to bad external IP by null routing</span>; suitable within an enclave</td>
+									<td>Deny</td>
+									<td>
+										<table>
+											<tr><th>IP</th></tr>
+											<tr><td>Source and Destination IP Address</td></tr>
+										</table>
+									</td>
+									<td>
+										<table>
+											<tr><th>Network.router</th></tr>
+											<tr><td>(optional)</td></tr>
+										</table>
+									</td>
+									<td>Method= blackhole</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+					
+					
 		<!-- Bootstrap core JavaScript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
