@@ -253,7 +253,9 @@
 						<h4 class="modal-title">Targets</h4>
 					</div>
 					<div class="modal-body">
-						<p>The TARGET is the object of the ACTION (or conversely, the ACTION is performed on the TARGET).  Targets include objects such as network connections, URLs, hashes, IP addresses, files, processes, and domains. There will be only one TARGET type per OpenC2 command. OpenC2 Targets will reference CybOX objects to the greatest extent practical.</p>
+						<p>The TARGET is the object of the ACTION (or conversely, the ACTION is performed on the TARGET).  OpenC2 will utilize pre-existing data models to provide the namespace for the TARGETs.  Initially, OpenC2 will reference the applicable CybOX objects in the OpenC2 TARGET namespace. However, OpenC2 can be supported by custom or other data models.</p>
+						
+						<p><a href="https://github.com/OpenC2-org/docs-pub/blob/master/targets.md">Target Details</a></p>
 					</div>
 				</div>
 
@@ -272,9 +274,9 @@
 						<h4 class="modal-title">Actuators</h4>
 					</div>
 					<div class="modal-body">
-						<p>An ACTUATOR  is the entity that puts command and control into motion or action. The ACTUATOR is the subject of the ACTION which performs the ACTION to the TARGET. There are varying levels of abstraction and functionality for an ACTUATOR ranging from a specific sensor to an entire system or even system of systems.</p>
-
-						<p>There will be only one ACTUATOR type per OpenC2 command. OpenC2 will leverage the data models utilized by the Secure Automation and Configuration Management (SACM) working group and the ISCM taxonomy to the greatest extent practical.</p>
+						<p>An ACTUATOR is the entity that puts command and control into motion or action. The ACTUATOR executes the ACTION on the TARGET. To the extent possible, OpenC2 will leverage existing standardized data models for ACTUATORs (e.g., IETF Security Automation and Continuous Monitoring, Information Security Continuous Monitoring (ISCM)).</p>
+						
+						<p><a href="https://github.com/OpenC2-org/docs-pub/blob/master/actuators.md">Actuator Details</a></p>
 					</div>
 				</div>
 
@@ -312,9 +314,9 @@
 						<h4 class="modal-title">Modifiers</h4>
 					</div>
 					<div class="modal-body">
-						<p>"Modifiers" provide additional information about the action such as time, periodicity, duration, and location. Modifiers can denote the when, where, and how aspects of an action.  Modifiers are similar to specifiers in that they can provide additional context specific details, and are intended to provide additional details for action/actuator pairs.</p>
-
-						<p>The modifier can also be used to convey the need for additional status information about the execution of an action.  Modifiers can be used to indicate whether the actuator should explicitly acknowledge receipt of the command, respond upon completion of the execution of the command, or provide some other status information.</p>
+						<p>Modifiers provide additional information about the action such as time, periodicity, duration, and location. Modifiers can denote the when, where, and how aspects of an action. The modifier can also be used to convey the need for additional status information about the execution of an action.  Modifiers can be used to indicate whether the actuator should explicitly acknowledge receipt of the command, respond upon completion of the execution of the command, or provide some other status information. The requested status/information will be carried in a RESPONSE.</p>
+						
+						<p><a href="https://github.com/OpenC2-org/docs-pub/blob/master/modifiers.md">Modifier Details</a></p>
 					</div>
 				</div>
 
