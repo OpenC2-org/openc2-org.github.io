@@ -314,3 +314,8 @@ div#partner-orgs a img {
 .modal-body > table span {
 	font-weight: bold;
 }
+
+.thumbnail {
+	/* override border */
+	border: 0px;
+}
