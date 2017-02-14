@@ -319,3 +319,8 @@ div#partner-orgs a img {
 	/* override border */
 	border: 0px;
 }
+
+.company-name {
+	text-align: left;
+	margin-top: 70px;
+}
