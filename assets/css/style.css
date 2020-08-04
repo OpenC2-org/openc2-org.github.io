@@ -740,3 +740,7 @@ section {
 .btn-green:hover {
   background: #23af7a;
 }
+
+.widthOfErrorImage {
+  width: 70%;
+}
