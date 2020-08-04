@@ -1,0 +1,1 @@
+Future defense will require the integration of new functional blocks, coordination of responses between domains, synchronization of cyber defense mechanisms, and automated actions at machine speed against current and pending attacks. Standard interfaces and protocols to facilitate the integration of components resulting in a more flexible and interoperable cyber defense system.

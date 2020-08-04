@@ -1,0 +1,1 @@
+Modern defense systems are typically statically configured and integrate products in a nonstandard way. Upgrading or modifying the functional blocks within the cyber-defense is intensive, may impact the efficacy of the system as a whole, and in many cases cannot be realized in cyber-relevant time.

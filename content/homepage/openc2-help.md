@@ -1,0 +1,1 @@
+OpenC2 provides a defined, standardized, and unambiguous machine-to-machine command and control language will help realize this vision.
