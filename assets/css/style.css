@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   border-radius: 3px;
   right: 15px;
   bottom: 15px;
-  background: #428bca;
+  background: #2d358d;
   color: #fff;
   transition: display 0.5s ease-in-out;
   z-index: 99999;
@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 
 .back-to-top:hover {
   color: #fff;
-  background: #629fd3;
+  background: #626fd3;
   transition: background 0.2s ease-in-out;
 }
 
@@ -423,10 +423,12 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   animation-delay: 0.8s;
   border: 0;
   background: #2bb673;
+  margin-left: 0px;
 }
 
 #hero .btn-get-started:hover {
   background: #23af7a;
+  color: #dddddd;
 }
 
 #hero a {
@@ -609,6 +611,7 @@ section {
 }
 
 .features .tab-content {
+  margin-top:10%;
   text-align: right;
 }
 
@@ -739,8 +742,13 @@ section {
 
 .btn-green:hover {
   background: #23af7a;
+  color: #dddddd;
 }
 
 .widthOfErrorImage {
   width: 70%;
+}
+
+.paddingBottom50 {
+  padding-bottom:50px;
 }

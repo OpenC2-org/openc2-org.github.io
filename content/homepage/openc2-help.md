@@ -1,1 +1,1 @@
-OpenC2 provides a defined, standardized, and unambiguous machine-to-machine command and control language will help realize this vision.
+OpenC2 is a limited language which simply conveys the “action” part of the cybersecurity process. This open standards driven orchestration language, based on the nouns and verbs required to encode human intent and decisions and machine-readable instructions, enables automated courses of action.
