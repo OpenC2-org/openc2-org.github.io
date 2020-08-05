@@ -1,0 +1,18 @@
+---
+layout: page
+title: OpenC2 in the News
+permalink: /news.html
+---
+
+<main id="main">
+  <section class="features section-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>OpenC2 in the News</h2>
+      </div>
+      <div>
+        <p>{% capture p1 %}{% include_relative content/openc2-news.md %}{% endcapture %}{{ p1 | markdownify }}</p>
+      </div>
+    </div>
+  </section>
+</main>
