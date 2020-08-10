@@ -155,6 +155,11 @@
     return false;
   });
 
+  // Toggle Search Bar on Search icon click.
+  $('.search-toggle').click(function() {
+    $('.top-search').toggle();
+  });
+
   // Init AOS
   function aos_init() {
     AOS.init({
