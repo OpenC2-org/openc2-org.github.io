@@ -926,6 +926,7 @@ section {
   bottom: 0;
   left: 50%;
   margin-left: -3px;
+  z-index: -1;
 }
 
 /* Container around content */
@@ -947,7 +948,7 @@ section {
   border: 4px solid #2bb673;
   top: 15px;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 5000;
 }
 
 /* Place the container to the left */
