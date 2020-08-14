@@ -868,7 +868,7 @@ section {
 	box-shadow: 0 5px 5px 0 rgba(0,0,0,.06);
 	display: none;
 	background: #f5f6f7;
-	z-index: 9999
+	z-index: 80;
 }
 
 .top-search span {
@@ -907,7 +907,9 @@ section {
   color: #dddddd;
 }
 
-/* Timeline */
+/*--------------------------------------------------------------
+# Timeline
+--------------------------------------------------------------*/
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
@@ -970,9 +972,9 @@ section {
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid #e4ebfe;
+  border: medium solid #f3f5f7;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #e4ebfe;
+  border-color: transparent transparent transparent #f3f5f7;
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -984,9 +986,9 @@ section {
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid #e4ebfe;
+  border: medium solid #f3f5f7;
   border-width: 10px 10px 10px 0;
-  border-color: transparent #e4ebfe transparent transparent;
+  border-color: transparent #f3f5f7 transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -997,7 +999,7 @@ section {
 /* The actual content */
 .content {
   padding: 20px 30px;
-  background-color: #e4ebfe;
+  background-color: #f3f5f7;
   position: relative;
   border-radius: 6px;
 }
@@ -1019,9 +1021,9 @@ section {
 /* Make sure that all arrows are pointing leftwards */
   .timecard::before {
     left: 60px;
-    border: medium solid #e4ebfe;
+    border: medium solid #f3f5f7;
     border-width: 10px 10px 10px 0;
-    border-color: transparent #e4ebfe transparent transparent;
+    border-color: transparent #f3f5f7 transparent transparent;
   }
 
 /* Make sure all circles are at the same spot */
@@ -1033,4 +1035,42 @@ section {
   .right {
     left: 0%;
   }
+}
+
+/*--------------------------------------------------------------
+# Contacts
+--------------------------------------------------------------*/
+.contacts .icon-box {
+  padding: 20px;
+  border-radius: 6px;
+  background: #f3f5f7;
+  transition: ease-in-out 0.3s;
+}
+
+.contacts .icon-box i {
+  float: left;
+  color: #3498db;
+  font-size: 40px;
+}
+
+.contacts .icon-box h4 {
+  margin-left: 70px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.contacts .icon-box h4 a {
+  color: #384046;
+  transition: 0.3s;
+}
+
+.contacts .icon-box p {
+  margin-left: 70px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.contacts .icon-box:hover h4 a {
+  color: #3498db;
 }
