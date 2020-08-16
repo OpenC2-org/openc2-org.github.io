@@ -868,7 +868,7 @@ section {
 @media screen and (min-width: 415px) and (max-width: 590px) {
   .search-toggle {
     position: fixed;
-    left:88%;
+    left:90%;
 	  top: 20px;
   }
 }
@@ -876,7 +876,7 @@ section {
 @media screen and (min-width: 600px) and (max-width: 990px) {
   .search-toggle {
   position: fixed;
-  left:88%;
+  left:92%;
 	top: 20px;
   }
 }
