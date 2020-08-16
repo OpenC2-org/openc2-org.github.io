@@ -884,11 +884,18 @@ section {
 @media screen and (min-width: 990px) and (max-width: 1024px) {
   .search-toggle {
   position: fixed;
-  left:90%;
+  left:96.5%;
 	top: 20px;
   }
 }
 
+@media screen and (min-width: 990px) and (max-width: 1024px) and (orientation: landscape){
+  .search-toggle {
+  position: fixed;
+  left:90%;
+	top: 20px;
+  }
+}
 .search-toggle:hover {
 	color: #27ae60
 }
