@@ -884,7 +884,7 @@ section {
 @media screen and (min-width: 990px) and (max-width: 1024px) {
   .search-toggle {
   position: fixed;
-  left:96.5%;
+  left:90%;
 	top: 20px;
   }
 }
