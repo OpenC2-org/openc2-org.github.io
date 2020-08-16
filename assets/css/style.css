@@ -254,8 +254,8 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 
 .mobile-nav-toggle {
   position: fixed;
-  right: 15px;
-  top: 20px;
+  right: 72px;
+  top: 18px;
   z-index: 9998;
   border: 0;
   background: none;
@@ -836,24 +836,24 @@ section {
 @media screen and (max-width: 330px) {
   .search-toggle {
     position: fixed;
-    left:65%;
-	  top: 22px;
+    left:85%;
+	  top: 20px;
   }
 }
 
 @media screen and (min-width: 330px) and (max-width: 375px) {
   .search-toggle {
     position: fixed;
-    left:65%;
-	  top: 22px;
+    left:85%;
+	  top: 20px;
   }
 }
 
 @media screen and (min-width: 330px) and (max-width: 414px) {
   .search-toggle {
     position: fixed;
-    left:65%;
-	  top: 22px;
+    left:85%;
+	  top: 20px;
   }
 }
 
@@ -861,23 +861,23 @@ section {
   .search-toggle {
     position: fixed;
     left:70%;
-	  top: 22px;
+	  top: 20px;
   }
 }
 
 @media screen and (min-width: 415px) and (max-width: 590px) {
   .search-toggle {
     position: fixed;
-    left:80%;
-	  top: 22px;
+    left:90%;
+	  top: 20px;
   }
 }
 
 @media screen and (min-width: 600px) and (max-width: 990px) {
   .search-toggle {
   position: fixed;
-  left:88%;
-	top: 22px;
+  left:92%;
+	top: 20px;
   }
 }
 
@@ -889,13 +889,6 @@ section {
   }
 }
 
-@media screen and (min-width: 990px) and (max-width: 1024px) and (orientation: landscape){
-  .search-toggle {
-  position: fixed;
-  left:90%;
-	top: 20px;
-  }
-}
 .search-toggle:hover {
 	color: #27ae60
 }
