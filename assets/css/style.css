@@ -778,7 +778,9 @@ section {
   padding: 50px 0;
 }
 
-/* Search Panel */
+/*--------------------------------------------------------------
+# Search Panel
+--------------------------------------------------------------*/
 
 .nav-search-icon {
   width: 14px;
@@ -828,30 +830,30 @@ section {
   cursor: pointer;
   position: relative;
   left:85%;
-	top: 11px;
+	top: 8px;
 }
 
 @media screen and (max-width: 600px) {
   .search-toggle {
     position: fixed;
-    left:85%;
-	  top: 20px;
+    left:80%;
+	  top: 22px;
   }
 }
 
 @media screen and (min-width: 600px) and (max-width: 990px) {
   .search-toggle {
   position: fixed;
-  left:88%;
-	top: 20px;
+  left:83%;
+	top: 22px;
   }
 }
 
 @media screen and (min-width: 990px) and (max-width: 1024px) {
   .search-toggle {
   position: fixed;
-  left:96%;
-	top: 20px;
+  left:92%;
+	top: 22px;
   }
 }
 
