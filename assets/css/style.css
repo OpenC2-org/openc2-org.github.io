@@ -254,7 +254,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 
 .mobile-nav-toggle {
   position: fixed;
-  right: 68px;
+  right: 60px;
   top: 20px;
   z-index: 9998;
   border: 0;
