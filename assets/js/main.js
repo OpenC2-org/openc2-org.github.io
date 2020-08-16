@@ -75,7 +75,6 @@
     $('body').append($mobile_nav);
     $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>');
     $('body').append('<div class="mobile-nav-overly"></div>');
-
     $(document).on('click', '.mobile-nav-toggle', function(e) {
       $('body').toggleClass('mobile-nav-active');
       $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
@@ -101,6 +100,14 @@
   } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
     $(".mobile-nav, .mobile-nav-toggle").hide();
   }
+
+  $(window).on('load resize', function () {
+    if ($(".mobile-nav-toggle").is(":visible")) {
+      $('.search-toggle').removeClass('search-toggle-relative').addClass('search-toggle-fixed');
+    } else {
+      $('.search-toggle').removeClass('search-toggle-fixed').addClass('search-toggle-relative');
+    }
+  });
 
   // Navigation active state on scroll
   var nav_sections = $('section');
