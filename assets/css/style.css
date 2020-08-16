@@ -254,7 +254,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 
 .mobile-nav-toggle {
   position: fixed;
-  right: 60px;
+  right: 58px;
   top: 20px;
   z-index: 9998;
   border: 0;
@@ -810,7 +810,7 @@ section {
   font-size: 18px;
   position: fixed;
   right: 28px;
-  top: 24px;
+  top: 23px;
 }
 
 .top-search {
