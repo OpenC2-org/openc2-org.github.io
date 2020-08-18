@@ -300,14 +300,14 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 50vh;
+  height: 39vh;
   padding: 0;
   overflow: hidden;
 }
 
 #hero .carousel-item {
   width: 100%;
-  height: 50vh;
+  height: 39vh;
   background-size: cover;
   background-position: top right;
   background-repeat: no-repeat;
@@ -557,81 +557,34 @@ section {
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
-.features {
-  padding-bottom: 40px;
+
+.features .row + .row {
+  margin-top: 100px;
 }
 
-.features .nav-tabs {
-  border: 0;
+.features h3 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #2d358d;
 }
 
-.features .nav-link {
-  border: 0;
-  padding: 20px;
-  transition: 0.3s;
-  color: #364146;
-  transition: 0.3s ease-in-out;
-  border-radius: 0;
-  border-left: 4px solid #fafbfb;
+.features ul {
+  list-style: none;
+  padding: 0;
 }
 
-.features .nav-link h4 {
-  font-size: 18px;
-  font-weight: 600;
-  transition: 0.3s ease-in-out;
-  color: #576971;
+.features ul li {
+  padding-bottom: 10px;
 }
 
-.features .nav-link p {
-  font-size: 14px;
+.features ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #68A4C4;
+}
+
+.features p:last-child {
   margin-bottom: 0;
-}
-
-.features .nav-link:hover {
-  background: #fafbfb;
-}
-
-.features .nav-link:hover h4 {
-  color: #364146;
-}
-
-.features .nav-link.active {
-  border-radius: 0;
-  border: 0;
-  border-left: 4px solid #2bb673;
-  background: #fafbfb;
-}
-
-.features .nav-link.active h4 {
-  color: #009cea;
-}
-
-.features .tab-pane.active {
-  -webkit-animation: slide-down 0.5s ease-out;
-  animation: slide-down 0.5s ease-out;
-}
-
-.features .tab-content {
-  margin-top:10%;
-  text-align: right;
-}
-
-@-webkit-keyframes slide-down {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes slide-down {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 /*--------------------------------------------------------------
