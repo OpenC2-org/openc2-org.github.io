@@ -1,635 +1,198 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<title>OpenC2</title>
-
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/jumbotron.css" rel="stylesheet">
-		<link href="css/base.css" rel="stylesheet">
-		
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-	</head>
-
-
-	<body id="top-content">
-
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a href="#top-content"><img class="nav-logo" src='img/openc2-logo.png' /></a>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<!--
-					<div class="dropdown">
-						<a class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-							<span class="glyphicon glyphicon-file"></span> Language <span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu">
-							<li><a data-toggle="modal" data-target="#designModal">Design Principles</a></li>
-							<li><a data-toggle="modal" data-target="#syntaxModal">Syntax</a></li>
-							<li><a data-toggle="modal" data-target="#actionsModal">Actions</a></li>
-							<li><a data-toggle="modal" data-target="#targetsModal">Targets</a></li>
-							<li><a data-toggle="modal" data-target="#actuatorsModal">Actuators</a></li>
-							<li><a data-toggle="modal" data-target="#specifiersModal">Specifiers</a></li>
-							<li><a data-toggle="modal" data-target="#modifiersModal">Modifiers</a></li>
-							<li><a data-toggle="modal" data-target="#examplesModal">OpenC2 Flexibility</a></li>
-						</ul>
-					</div>
-					--> 
-					<a class="btn btn-primary" type="button" href="https://github.com/oasis-tcs/openc2-tc-ops/blob/master/FAQ.md">
-						<span class="glyphicon glyphicon-file"></span> FAQ
-					</a>
-					<a class="btn btn-primary" type="button" href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=openc2#technical">
-						<span class="glyphicon glyphicon-file"></span> Specifications
-					</a>
-					<a class="btn btn-primary" type="button" href="https://docs.google.com/document/d/1Bz_WXOiYc9vmMS8rNEP1-ZZgPzdeGoZMN6W5W9GSmdU/edit?usp=sharing">
-						<span class="glyphicon glyphicon-file"></span> Other Documentation 
-					</a>
-					<a class="btn btn-primary" type="button" href="https://github.com/oasis-open?utf8=%E2%9C%93&q=openc2-&type=&language=">
-						<span class="glyphicon
-						glyphicon-cog"></span> Open Source SW
-					</a>
-					<a class="btn btn-primary" type="button" href="docs/OpenC2_Whitepaper.pdf">
-						<span class="glyphicon glyphicon-file"></span> Early Concept
-					</a>
-					<div class="navbar-right"></div>
-				</div>
-			</div>
-		</nav>
-
-		<div class="container">
-			<div class="row">
-				<div id="logo" class="col-md-12 logo">
-					<h1>OpenC2</h1>
-				</div>
-			</div>
-		</div>
-
-		<!-- Main jumbotron for a primary marketing message or call to action -->
-<style type="text/css">
-.event-table  {border-collapse:collapse;border-spacing:0;border:none;text-align:left}
-.event-table td{font-size:14px;padding:2px 0px;border-style:solid;border-width:0px}
-</style>
-
-		<div class="jumbotron">
-		
-			<div class="container">
-				<div class="feature">
-					<h2>The OpenC2 Forum is now<br>the OASIS OpenC2 Technical Committee</h2>
-					<p>On June 7, 2017, the OpenC2 Forum  transitioned to 
-					the <a href="https://www.oasis-open.org">OASIS</a> standards development consortium.</p>
-					<p>We welcome your participation in the <b><a href="https://www.oasis-open.org/committees/openc2/"> OpenC2 
-						Technical Committee (TC)</a></b></p>
-					<hr>
-					<h2>Committee Specifications Published!</h2>
-					<p>As of 11 July 2019, the three OpenC2 specifications have been approved as OASIS Committee Specifications, and they have been
-						 formally published by OASIS. The announcement and links to the specification documents 
-						<a href="https://www.oasis-open.org/news/announcements/three-committee-specifications-approved-by-open-command-and-control-openc2-tc">can be found here</a>.
-					</p>
-					<p>A minor update to the Language Specification was approved in November 2019, so the current version is v1.0 CS02. The announcement
-					for that update <a href="https://www.oasis-open.org/news/announcements/open-command-and-control-openc2-language-specification-v1-0-from-openc2-tc-approv">can be found here.</a>
-					</p>
-					<hr>
-					<h2>Plug Fest / Hackathon: January 2020</h2>
-					<p>The OpenC2 TC conducted an interoperability Plug Fest / Hackathon on 27-28 January 2020. This event was 
-						sponsored by the US Cyber Command's 
-						<a href="https://dreamport.tech">DreamPort</a> facility in Columbia, MD, and 
-						took place at the nearby <a href="https://www.umbctraining.com/">UMBC Training</a> facility.
-					</p>
-					<p>The Plug Fest / Hackathon event drew about 50 participants from a broad
-						range of organizations and multiple countries. A summary of the results
-						can be found on the 
-						<a href="https://github.com/oasis-tcs/openc2-usecases/blob/master/Cybercom-Plugfest/Plugfest-Outcomes.md">Plug Fest Outcomes</a> 
-						page on GitHub.	
-					</p>
-					<!--
-					 <table class="event-table" align="center">
-						<colgroup>
-							<col style="width: 100px">
-							<col style="width: 300px">
-						</colgroup>
-						<tr>
-							<td>May 18-19</td>
-							<td>OpenC2 Forum Face-to-Face Meeting</td>
-						</tr>
-						<tr>
-							<td>June 7</td>
-							<td>OASIS TC Inaugural Meeting</td>
-						</tr>
-						<tr>
-							<td></td>
-							<td>(<a href="https://www.oasis-open.org/committees/openc2/">Click here to Join</a> by May 30 to participate!)</td>
-						</tr>
-						<tr>
-							<td>June 21-22</td>
-							<td>Borderless Cyber 2017</td>
-						</tr>
-					</table>
-				 
-					<p>For details contact us at <a href="mailto:info@OpenC2.org?Subject=Interested%20in%20Face-to-Face%20Meeting">info@OpenC2.org</a></p>
-				-->
-					
-					
-				</div>
-			</div>
-
-			<div class="container">
-				<h2><b>Open Command and Control (OpenC2):</b></h2>
-				<p align="center"><u>A Forum to Promote Global Development and Adoption of Command and Control</u></p>
-				<hr>
-				<p><b>Today, cyber-attacks are increasing in terms of complexity, speed, and dynamics. 
-					Advanced cyber actors now use highly-sophisticated, dynamic attack steps with automation, 
-					and these trends are likely to continue.</b></p>
-			</div>
-
-			<div id="why" class="container">
-				<div class="row row-summaries">
-					<div class="col-md-5">
-						<div class="summary" id="current-defense-summary">
-							<h3><b>Current Cyber-Defense</b></h3>
-							<p>Modern defense systems are typically statically configured and integrate products in a nonstandard way. 
-								Upgrading or modifying the functional blocks within the cyber-defense is intensive, may impact the efficacy 
-								of the system as a whole, and in many cases cannot be realized in cyber-relevant time.</p>
-							&nbsp;
-							&nbsp;
-							&nbsp;
-							&nbsp;
-						</div>
-					</div>
-					<div class="col-md-7">
-						<div class="summary" id="future-defense-summary">
-							<h3><b>Defense in <em>Cyber-Relevant</em> Time</b></h3>
-							<p>Future defense will require the integration of new functional blocks, coordination of responses between 
-								domains, synchronization of cyber defense mechanisms, and automated actions at machine speed against 
-								current and pending attacks. Standard interfaces and protocols to facilitate the integration of components 
-								resulting in a more flexible and interoperable cyber defense system. <em>A defined, standardized, and 
-								unambiguous machine-to-machine command and control language will help realize this vision.</em></p>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-12">
-						<p><strong><u>Our Vision</u>: </strong>The OpenC2 Forum defines a language at a level of abstraction that will enable 
-							unambiguous command and control of cyber defense technologies. OpenC2 is broad enough to provide flexibility in 
-							the implementations of devices and accommodate future products and will have the precision necessary to achieve the desired effect.
-						</p>
-						
-						<!--
-						<p>The Open Command and Control Forum promotes the global development and adoption of the OpenC2 language and reference material.</p>
-						<p>The goal of the Forum is to serve developers, users, and the entire cybersecurity ecosystem by providing a set of shared resources 
-							to expand the use of standardized command and control for cyber defense activities, to enable technology vendors building 
-							orchestration and cyber response technologies, and to assist developers in producing response technologies that can be readily used in coordinated responses.</p>
-						-->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="container">
-			<a href="https://www.oasis-open.org/committees/openc2/"><img class="" src='img/PF-Jan2020-LogoGraphics.png' width="100%"/></a>
-		</div>
-		
-		<div id="about" class="container">
-			<div id="details" class="row row-features">
-				<div class="col-md-2">&nbsp;</div>
-
-				<div class="col-md-8">
-					<div class="feature">
-					<!--	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> --> 
-						<h3>Join</h3>
-						<p><b>Interested in having an impact on the standardization of cyber command and control?</b><hr> Consider joining our team of cyber security 
-							stakeholders including cyber security integrators, product vendors, government, and academia.</p>
-						<p><a href="https://www.oasis-open.org/committees/openc2/">Join the OpenC2 Technical Committee</a></p>
-					</div>
-				</div>
-
-				<div class="col-md-2">&nbsp;</div>
-			</div>
-		</div>
-
-		<div class="main-content">
-
-		<hr>
-<!--
-		<footer>
-			<p>&copy; 2017 Company, Inc.</p>
-		</footer>
--->
-	</div>
-
-
-
-		<!-- ============================== Modal popups ============================== -->
-
-		<div id="designModal" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Design Principles</h4>
-					</div>
-					<div class="modal-body">
-						<p>Cyber attacks operate at machine speed. Effective responses to attacks must operate at machine speed.  
-							Security solutions must not only be faster and smarter, they must be able to work together to create a 
-							concerted automatic cyber defense. This coordinated defensive activity requires that there be a commonly 
-							understood way to express system actions. OpenC2 is an open standards approach to translating the operational 
-							and defensive intent of an organization into orchestrated and automated system control actions.</p>
-
-						<p>A command set and syntax, OpenC2, based on the actions, targets, actuators, and attributes required to encode 
-							desired effect and command decisions as machine-readable instructions to enable automated courses of action 
-							has been defined.  The expressiveness of the language can be expanded in a context-specific way by adding 
-							attributes and objects to further specify the general activities. This strategy achieves broad interoperability 
-							while only standardizing and maintaining a small set of actions.</p>
-
-						<p>The definition of a language such as OpenC2 is necessary but insufficient to enable future cyber defenses.  OpenC2 
-							was designed to be flexible, agnostic of external protocols that provide services such as transport, authentication, 
-							key management and other services. </p>
-
-						<hr />
-
-						<p>The OpenC2 design principles include the following:</p>
-
-						<ul>
-							<li>Support cyber relevant response time for coordination and response actions.
-							<li>Be infrastructure, architecture, and vendor agnostic.
-							<li>Support multiple levels of abstraction, necessary to permit the contextualization of commands for a wide variety of operating environments.
-							<li>Permit commands to be invoked that are either tasking/response actions or notifications
-								<ul>
-									<li>Tasking/response actions result in a state change.
-									<li>Notifications require supporting analytics/decision processes.
-								</ul>
-							<li>Provide an extensible syntax  to accommodate different types of actions, targets, and actuators 
-								(e.g., sensor, endpoint, network device, human) and specific targets and actuators.
-							<li>Ensure the OpenC2 command is independent of a message construct that provides transport, includes 
-								identification of priority/ quality of service, and supports security attributes.
-
-						</ul>
-
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-
-		<!-- ============================== Modal popups ============================== -->
-
-		<div id="syntaxModal" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Syntax</h4>
-					</div>
-					<div class="modal-body">
-						<p>Conceptually, an OpenC2 command has the following form:</p>
-
-						<pre><code>
-(
-    ACTION (
-        type = &lt;ACTION_TYPE&gt;
-    ),
-    TARGET (
-        type = &lt;TARGET_TYPE&gt;,
-        &lt;target-specifier>
-    ),
-    ACTUATOR (
-        type = &lt;ACTUATOR_TYPE&gt;,
-        &lt;actuator-specifier&gt;
-    ),
-    MODIFIERS (
-        &lt;list-of-modifiers&gt;
-    )
-)
-						</code></pre>
-						
-						<p><a href="https://github.com/OpenC2-org/docs-pub/blob/master/3.0_openc2-language.md#32-abstract-syntax">Click here for more details.</a></p>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-
-		<!-- ============================== Modal popups ============================== -->
-
-		<div id="actionsModal" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Actions</h4>
-					</div>
-					<div class="modal-body">
-						<p>All OpenC2 commands start with an ACTION which indicates the type of command to perform such as gather and 
-							convey information, control activities and devices, and control permissions and access.  The range of options 
-							and potential impact on the information system associated with a particular ACTION is a function of the ACTUATOR.  
-							For cases that involve multiple options for an ACTION, modifiers are used.</p>
-
-						<img src="img/actions3.png" />
-					</div>
-					<div class="modal-body">
-						<p><a href="https://github.com/OpenC2-org/docs-pub/blob/master/3.3_actions.md#33-actions">Action Details</a></p>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-
-		<!-- ============================== Modal popups ============================== -->
-
-		<div id="targetsModal" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Targets</h4>
-					</div>
-					<div class="modal-body">
-						<p>The TARGET is the object of the ACTION (or conversely, the ACTION is performed on the TARGET).  OpenC2 will utilize 
-							pre-existing data models to provide the namespace for the TARGETs.  Initially, OpenC2 will reference the applicable 
-							CybOX objects in the OpenC2 TARGET namespace. However, OpenC2 can be supported by custom or other data models.</p>
-						
-						<p><a href="https://github.com/OpenC2-org/docs-pub/blob/master/3.4_target-vocabulary.md#34-target-vocabulary">Target Details</a></p>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-
-		<!-- ============================== Modal popups ============================== -->
-
-		<div id="actuatorsModal" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Actuators</h4>
-					</div>
-					<div class="modal-body">
-						<p>An ACTUATOR is the entity that puts command and control into motion or action. The ACTUATOR executes the 
-							ACTION on the TARGET. To the extent possible, OpenC2 will leverage existing standardized data models for ACTUATORs 
-							(e.g., IETF Security Automation and Continuous Monitoring, Information Security Continuous Monitoring (ISCM)).</p>
-						
-						<p><a href="https://github.com/OpenC2-org/docs-pub/blob/master/3.5_actuator-vocabulary.md#35-actuator-vocabulary">Actuator Details</a></p>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-
-		<!-- ============================== Modal popups ============================== -->
-
-		<div id="specifiersModal" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Specifiers</h4>
-					</div>
-					<div class="modal-body">
-						<p>"Specifiers" further distinguish individual or groups of targets or actuators. Specifiers can be associated with the 
-							TARGET or ACTUATOR in an OpenC2 command. Commands are appended with specifiers as context specific details become available.</p>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-
-		<!-- ============================== Modal popups ============================== -->
-
-		<div id="modifiersModal" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Modifiers</h4>
-					</div>
-					<div class="modal-body">
-						<p>Modifiers provide additional information about the action such as time, periodicity, duration, and location. 
-							Modifiers can denote the when, where, and how aspects of an action. The modifier can also be used to convey the 
-							need for additional status information about the execution of an action.  Modifiers can be used to indicate 
-							whether the actuator should explicitly acknowledge receipt of the command, respond upon completion of the 
-							execution of the command, or provide some other status information. The requested status/information will be carried in a RESPONSE.</p>
-						
-						<p><a href="https://github.com/OpenC2-org/docs-pub/blob/master/3.6_modifier-vocabulary.md#36-modifier-vocabulary">Modifier Details</a></p>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-		
-		<!-- ============================== Modal popups ============================== -->
-
-		<div id="aboutModal" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">About</h4>
-					</div>
-					<div class="modal-body">
-						<div class="row row-about">
-							<div class="col-md-12">
-								<p>The Open Command and Control Forum promotes the global development and adoption of the OpenC2 language and reference material.</p>
-
-								<p>What is the OpenC2 Approach?</p>
-							</div>
-						</div>
-
-						<div class="row row-scopes">
-							<div class="col-md-6">
-								<div class="scope">
-									<h5>Initial Scope</h5>
-									<p>The OpenC2 Forum is initially focused on defining a language at a level of abstraction that will enable 
-										command and control of cyber defense entities that execute the actions with enough generality to provide 
-										flexibility in the implementations of devices and accommodate future products.</p>
-
-									<p>The initial scope of the OpenC2 effort is to create a lexicon with a set of terms that define the actions, 
-										the target of the actions, and the entities that execute the action. The OpenC2 language also defines an 
-										extensible syntax to accommodate attributes that further specify the targets, components, and actions that 
-										support a wide range of operational environments.</p>
-
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="scope">
-									<h5>Future Scope</h5>
-									<p>Future OpenC2 efforts will further detail the syntax, lock down the controlled vocabulary, and define implementation 
-										approaches to facilitate interoperable machine to machine communications. The OpenC2 effort will develop and 
-										promulgate reference implementations to demonstrate the use and flexibility of OpenC2 and promote the incorporation of 
-										OpenC2 in cyber defense solutions.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- ============================== Modal popups ============================== -->
-
-		<div id="examplesModal" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Reference Implementation</h4>
-					</div>
-					<div class="modal-body">
-						<p>The expressiveness of the language can be expanded in a context-specific way by adding attributes and objects to further specify 
-							the general activities. This strategy achieves broad interoperability while only standardizing and maintaining a small set of actions.</p>
-						<table>
-							<thead>
-								<tr>
-									<th>Description</th>
-									<th>Action</th>
-									<th>
-										<table>
-											<tr><th>Target</th></tr>
-											<tr><td>Target-Specifier</td></tr>
-										</table>
-									</th>
-									<th>
-										<table>
-											<tr><th>Actuator</th></tr>
-											<tr><td>Actuator-specifier</td></tr>
-										</table>
-									</th>
-									<th>Modifier</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><span>Block traffic to/from specific IP address</span> [effects-based, no actuator specified]; suitable for inter-domain coordination</td>
-									<td>Deny</td>
-									<td>
-										<table>
-											<tr><th>Network Connection</th></tr>
-											<tr><td>Source and Destination IP Address</td></tr>
-										</table>
-									</td>
-									<td>
-										<table>
-											<tr><th></th></tr>
-											<tr><td></td></tr>
-										</table>
-									</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td><span>Block traffic at all network devices</span> [specify actuator class]; suitable for inter-domain coordination 
-										or as a command to an orchestration engine which further contextualizes for the enclave’s environment</td>
-									<td>Deny</td>
-									<td>
-										<table>
-											<tr><th>Network Connection</th></tr>
-											<tr><td>Source and Destination IP Address</td></tr>
-										</table>
-									</td>
-									<td>
-										<table>
-											<tr><th>Network (any devices)</th></tr>
-											<tr><td></td></tr>
-										</table>
-									</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td><span>Block traffic at network routers</span> [specify type of network device actuator]; suitable within an enclave</td>
-									<td>Deny</td>
-									<td>
-										<table>
-											<tr><th>IP</th></tr>
-											<tr><td>Source and Destination IP Address</td></tr>
-										</table>
-									</td>
-									<td>
-										<table>
-											<tr><th>Network.router</th></tr>
-											<tr><td>(optional)</td></tr>
-										</table>
-									</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td><span>Block traffic</span> at specific network router; suitable within an enclave</td>
-									<td>Deny</td>
-									<td>
-										<table>
-											<tr><th>IP</th></tr>
-											<tr><td>Source and Destination IP Address</td></tr>
-										</table>
-									</td>
-									<td>
-										<table>
-											<tr><th>Network.router</th></tr>
-											<tr><td>Router identity</td></tr>
-										</table>
-									</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td><span>Block access to bad external IP by null routing</span>; suitable within an enclave</td>
-									<td>Deny</td>
-									<td>
-										<table>
-											<tr><th>IP</th></tr>
-											<tr><td>Source and Destination IP Address</td></tr>
-										</table>
-									</td>
-									<td>
-										<table>
-											<tr><th>Network.router</th></tr>
-											<tr><td>(optional)</td></tr>
-										</table>
-									</td>
-									<td>Method= blackhole</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-		</div>
-					
-					
-		<!-- Bootstrap core JavaScript
-		================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-		<script src="js/bootstrap.min.js"></script>
-	</body>
-
-</html>
+---
+layout: default
+title: OpenC2
+permalink: /
+---
+
+<!-- ======= Carousel Section ======= -->
+<section id="hero">
+  <div class="hero-container">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="carousel-container">
+            <div class="carousel-content container">
+              {% include_relative content/homepage/carousel/slide1.html %}
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="carousel-container">
+            <div class="carousel-content container">
+              {% include_relative content/homepage/carousel/slide2.html %}
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="carousel-container">
+            <div class="carousel-content container">
+              {% include_relative content/homepage/carousel/slide3.html %}
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-item">
+          <div class="carousel-container">
+            <div class="carousel-content container">
+              {% include_relative content/homepage/carousel/slide4.html %}
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon icofont-rounded-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon icofont-rounded-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+  </div>
+</section><!-- End Hero -->
+
+<main id="main">
+
+  <!-- ======= Features Section ======= -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-title">
+        <h2>Open Command and Control (OpenC2)</h2>
+        <p class="section-subtitle"><em>Creating a standardized language for the command and control of technologies that
+            provide or support cyber defenses.</em></p>
+      </div>
+      <div class="row" data-aos="fade-up">
+        <div class="col-md-5">
+          <img src="assets/img/vision.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-6 pt-4">
+          <h3>Vision</h3>
+          <p>{% capture p1 %}{% include_relative content/homepage/vision.md %}{% endcapture %}{{ p1 | markdownify }}</p>
+        </div>
+      </div>
+
+      <div class="row" data-aos="fade-up">
+        <div class="col-md-6 order-1 order-md-2">
+          <img src="assets/img/attackspeed.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-6 pt-3 order-2 order-md-1">
+          <h3>Current Cyberdefense</h3>
+          <p>
+            {% capture p2 %}{% include_relative content/homepage/current-cyberdefense.md %}{% endcapture %}{{ p2 | markdownify }}
+          </p>
+        </div>
+      </div>
+
+      <div class="row" data-aos="fade-up">
+        <div class="col-md-6">
+          <img src="assets/img/automate.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-6 pt-3">
+          <h3>OpenC2 for Defense in Cyber-Relevant Time</h3>
+          <p>
+            {% capture p3 %}{% include_relative content/homepage/defense-cybertime.md %}{% endcapture %}{{ p3 | markdownify }}
+          </p>
+        </div>
+      </div>
+
+      <div class="row" data-aos="fade-up">
+        <div class="col-md-6 order-1 order-md-2">
+          <img src="assets/img/openc2-help.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-6 pt-3 order-2 order-md-1">
+          <h3>How can OpenC2 help?</h3>
+          <p>
+            {% capture p4 %}{% include_relative content/homepage/openc2-help.md %}{% endcapture %}{{ p4 | markdownify }}
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </section><!-- End Features Section -->
+
+  <!-- ======= Frequently Asked Questions Section ======= -->
+  <section id="faq" class="faq section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <ul>
+          <li data-aos="fade-up">
+            <em class="bx bx-help-circle icon-help"></em> <a data-toggle="collapse" class="collapse"
+              href="#faq-list-1">What is OpenC2? <em class="bx bx-chevron-down icon-show"></em><em
+                class="bx bx-chevron-up icon-close"></em></a>
+            <div id="faq-list-1" class="collapse show" data-parent=".faq-list">
+              <p>
+                OpenC2 is a standardized language for machine-to-machine communications for the command and control of
+                technologies that provide or support cyber defenses.
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="100">
+            <em class="bx bx-help-circle icon-help"></em> <a data-toggle="collapse" href="#faq-list-2"
+              class="collapsed">What is the difference between OpenC2 and OASIS? <em
+                class="bx bx-chevron-down icon-show"></em><em class="bx bx-chevron-up icon-close"></em></a>
+            <div id="faq-list-2" class="collapse" data-parent=".faq-list">
+              <p>
+                OpenC2 is an open source language, available for use and input across the cyber-security community. Many
+                open source languages and technologies benefit from support of standards bodies, to help guide and
+                champion on-going use and evolution of the software or technology. OpenC2 is a project under OASIS.
+                OASIS is the Organization for the Advancement of Structured Information Standards, a nonprofit
+                international consortium that develops open IT standards.
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="150">
+            <em class="bx bx-help-circle icon-help"></em> <a data-toggle="collapse" href="#faq-list-3"
+              class="collapsed">What can OpenC2 do for me? <em class="bx bx-chevron-down icon-show"></em><em
+                class="bx bx-chevron-up icon-close"></em></a>
+            <div id="faq-list-3" class="collapse" data-parent=".faq-list">
+              <p>
+                As cyber-defense technology vendors and providers adopt OpenC2, OpenC2 can dramatically improve incident
+                response to cyber-threats and allow for enterprise wide interoperability for cyber-security policy
+                orchestration. Management and development of cyber-defense responses is simplified and greater
+                collaboration and integration across a wide range of technologies is enabled.
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="200">
+            <em class="bx bx-help-circle icon-help"></em> <a data-toggle="collapse" href="#faq-list-4"
+              class="collapsed">How can I access OpenC2?<em class="bx bx-chevron-down icon-show"></em><em
+                class="bx bx-chevron-up icon-close"></em></a>
+            <div id="faq-list-4" class="collapse" data-parent=".faq-list">
+              <p>
+                OASIS Specifications are open for all to use. See <a rel="noopener noreferrer" href="{{ site.baseurl }}/specifications.html">this page</a> for the specifications. 
+              </p>
+              <p>Open source software to implement OpenC2 can be found <a rel="noopener noreferrer" href="{{ site.baseurl }}/opensource.html">in this page</a>.</p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="centerText">
+        <a rel="noopener noreferrer" href="{{ site.baseurl }}/faq.html"
+          class="btn-green animate__animated animate__fadeInUp scrollto">View More</a>
+      </div>
+    </div>
+  </section><!-- End Frequently Asked Questions Section -->
+
+</main><!-- End #main -->

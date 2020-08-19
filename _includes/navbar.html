@@ -1,0 +1,48 @@
+<!-- ======= Navigation ======= -->
+<header id="header">
+  <div class="container">
+    <div class="logo float-left">
+      <a href="{{ site.baseurl }}/index.html"><img width="200px" height="45px"
+          src="{{ site.baseurl }}/assets/img/logo.svg" alt="" class="img-fluid"></a>
+    </div>
+    <nav class="nav-menu float-right d-none d-lg-block">
+      <ul>
+        <li class="active"><a href="{{ site.baseurl }}/index.html">Home</a></li>
+        <li class="drop-down"><a href="">About</a>
+          <ul>
+            <li><a href="{{ site.baseurl }}/oasis.html">OASIS</a></li>
+            <li><a href="{{ site.baseurl }}/otc.html">OASIS OpenC2 Technical Committee</a></li>
+            <li><a href="{{ site.baseurl }}/openc2.html">This Website</a></li>
+          </ul>
+        </li>
+        <li class="drop-down"><a href="">Resources</a>
+          <ul>
+            <li><a href="{{ site.baseurl }}/opensource.html">Open Source Software</a></li>
+            <li><a href="{{ site.baseurl }}/specifications">Specifications</a></li>
+            <li><a href="{{ site.baseurl }}/faq.html">Frequently Asked Questions</a></li>
+            <li><a href="{{ site.baseurl }}/otherdocumentation.html">Other Documentation</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ site.baseurl }}/news.html">OpenC2 in the News</a></li>
+        <li><a href="{{ site.baseurl }}/joinus.html">Join Us</a></li>
+        <li><a href="{{ site.baseurl }}/contact.html">Contact</a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
+    <i class="icofont-search-1 search-toggle search-toggle-relative"></i>
+    <div title="Search" class="top-search">
+      <div class="container">
+        <div class="row ">
+          <div class="col-lg-12">
+            <form method="get" action="https://google.com/search" target="_blank">
+              <button type="submit">Search</button>
+              <span>
+                <input name="query" type="text" autocomplete="off" placeholder="Search with Google" maxlength="200" />
+                <input name="q" type="hidden" value="site:openc2.org"/>
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header><!-- End Navigation -->
