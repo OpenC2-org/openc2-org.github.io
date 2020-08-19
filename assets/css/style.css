@@ -296,7 +296,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Hero Carousel Section
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
@@ -343,15 +343,6 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   text-align: left;
 }
 
-@media (max-width: 992px) {
-  #hero, #hero .carousel-item {
-    height: calc(100vh - 70px);
-  }
-  #hero .carousel-content.container {
-    padding: 0 50px;
-  }
-}
-
 #hero h2 {
   color: #fff;
   margin-bottom: 30px;
@@ -360,7 +351,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 #hero p {
-  width: 80%;
+  width: 90%;
   -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
   color: #fff;
@@ -441,7 +432,29 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 @media (max-width: 768px) {
   #hero h2 {
-    font-size: 28px;
+    font-size: 20px;
+  }
+  #hero p {
+    font-size: 0.8rem;
+  }
+  #hero .carousel-content.container {
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  #hero, #hero .carousel-item {
+    height: 90vh;
+  }
+  #hero .carousel-content.container {
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 50px;
+    font-size: 0.9rem;
   }
 }
 
