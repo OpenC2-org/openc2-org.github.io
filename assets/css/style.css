@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 
 .back-to-top:hover {
   color: #fff;
-  background: #626fd3;
+  background: #93b0ca;
   transition: background 0.2s ease-in-out;
 }
 
@@ -752,7 +752,6 @@ section {
   border: 0;
   background: none;
   font-size: 20px;
-  transition: all 0.4s;
   outline: none !important;
   line-height: 1;
   cursor: pointer;
@@ -760,10 +759,6 @@ section {
   color: #343a40;
 	font-size: 16px;
   cursor: pointer;
-}
-
-.search-toggle:hover {
-	color: #27ae60
 }
 
 .search-toggle-relative {
