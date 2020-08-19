@@ -204,7 +204,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   left: -260px;
   width: 260px;
   padding-top: 18px;
-  background: #4a5f72;
+  background: #617485;
   transition: 0.4s;
 }
 
@@ -316,7 +316,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 
 #hero .carousel-item::before {
   content: '';
-  background-color: #2d358d;
+  background-color: #617485;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -578,7 +578,7 @@ section {
 .features h3 {
   font-weight: 400;
   font-size: 24px;
-  color: #2d358d;
+  color: #617485;
 }
 
 .features ul {
@@ -729,7 +729,7 @@ section {
   width: 100%;
   height: 100%;
   content: "";
-  background-color: #2d358d;
+  background-color: #617485;
 }
 
 .background-overlay {
@@ -843,7 +843,7 @@ section {
   content: '';
   position: absolute;
   width: 6px;
-  background-color: #2d358d;
+  background-color: #617485;
   top: 0;
   bottom: 0;
   left: 50%;
