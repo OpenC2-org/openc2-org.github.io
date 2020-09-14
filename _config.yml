@@ -1,0 +1,21 @@
+exclude:
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "README.md"
+  - "LICENSE.md"
+  - "*.gemspec"
+
+keep_files:
+  - "CNAME"
+  - ".git"
+  - ".gitignore"
+
+# Site settings
+title: OpenC2
+subtitle: "OpenC2"
+url: "" # the base hostname & protocol for your site
+baseurl: "/openc2-org.github.io"
+logo: "/assets/img/logo.svg"
+
+# Build settings
+markdown: kramdown
