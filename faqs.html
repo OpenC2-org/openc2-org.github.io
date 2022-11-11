@@ -14,7 +14,7 @@ permalink: /faqs.html
 <main id="main">
 
 
-<!-- use filename to control sequencing of FAQ list -->
+<!-- sort by filename to control sequencing of FAQ list -->
 {% assign sorted_array = site.faqs | sort %}
 
   <!-- ======= Frequently Asked Questions Section ======= -->
@@ -29,7 +29,7 @@ permalink: /faqs.html
                 class="bx bx-chevron-up icon-close"></em></a>
             <div id="faq-list-{{ loop.index }}" class="collapse show" data-parent=".faq-list">
               <p>
-                {{ faq }}
+                {{ faq.content }}
               </p>
             </div>
           </li>
