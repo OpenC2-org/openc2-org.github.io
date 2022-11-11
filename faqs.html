@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Frequently Asked Questions (test 5)
+title: Frequently Asked Questions (test 6)
 pageHeading: Frequently Asked Questions
 permalink: /faqs.html
 ---
@@ -14,7 +14,7 @@ permalink: /faqs.html
 <main id="main">
     {% assign sorted_array = site.faqs | sort %}
     <ul>
-    {% for faq in site.faqs %}
+    {% for faq in sorted_array %}
         <li>{{ faq.question }}</li>
     {% endfor %}
     </ul>
