@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Frequently Asked Questions (test 4)
+title: Frequently Asked Questions (test 5)
 pageHeading: Frequently Asked Questions
 permalink: /faqs.html
 ---
@@ -12,6 +12,7 @@ permalink: /faqs.html
 <meta http-equiv='pragma' content='no-cache'>
 
 <main id="main">
+    {% assign sorted_array = site.faqs | sort %}
     <ul>
     {% for faq in site.faqs %}
         <li>{{ faq.question }}</li>
