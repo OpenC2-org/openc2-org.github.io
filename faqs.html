@@ -15,7 +15,11 @@ permalink: /faqs.html
     {% assign sorted_array = site.faqs | sort %}
     <ul>
     {% for faq in sorted_array %}
-        <li>{{ faq.question }}</li>
+        <li>{{ faq.question }}<br>
+            {{ faq }}
+        </li>
+        <br>
+        <br>
     {% endfor %}
     </ul>
 </main>
