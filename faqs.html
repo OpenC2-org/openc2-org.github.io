@@ -5,7 +5,8 @@ pageHeading: Frequently Asked Questions
 permalink: /faqs.html
 ---
 
-
+<ul>
 {% for faq in site.faqs %}
-    <span>{{ faq.question }}</span>
+    <li>{{ faq.question }}</li>
 {% end for %}
+</ul>
