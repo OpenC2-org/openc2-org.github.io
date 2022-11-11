@@ -1,14 +1,21 @@
 ---
 layout: page
-title: Frequently Asked Questions (test 3)
+title: Frequently Asked Questions (test 4)
 pageHeading: Frequently Asked Questions
 permalink: /faqs.html
 ---
 
-<ul>
-{% for faq in site.faqs %}
-    <li>{{ faq.question }}</li>
-{% end for %}
-</ul>
+<!-- ======= Tags to Block Caching (for test purposes) ======= -->
 
+<meta http-equiv='cache-control' content='no-cache'> 
+<meta http-equiv='expires' content='0'> 
+<meta http-equiv='pragma' content='no-cache'>
+
+<main id="main">
+    <ul>
+    {% for faq in site.faqs %}
+        <li>{{ faq.question }}</li>
+    {% end for %}
+    </ul>
+</main>
 
