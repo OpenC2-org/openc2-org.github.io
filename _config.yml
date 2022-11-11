@@ -19,3 +19,7 @@ logo: "/assets/img/logo.svg"
 
 # Build settings
 markdown: kramdown
+
+# Use a collection for the FAQs
+collections:
+  faqs:
