@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Frequently Asked Questions (test 14)
+title: Frequently Asked Questions (test 15)
 pageHeading: Frequently Asked Questions
 permalink: /faqs.html
 ---
@@ -22,11 +22,8 @@ permalink: /faqs.html
     <div class="container" data-aos="fade-up">
       <div class="faq-list faq-list-lg">
         <ul>
-            <!-- test 14 -->
+            <!-- test 15 -->
             {% for faq in sorted_array %}
-            {% assign i = {{ forloop.index }} %}
-            {% capture faq-ref %}#faq-list-{{ i }}{% endcapture %}
-            {% capture faq-div %}faq-list-{{ i }}{% endcapture %}
           <li data-aos="fade-up">
             <em class="bx bx-help-circle icon-help"></em> <a data-toggle="collapse" class="collapse"
               href="#faq-ref-{{ forloop.index }}" class="collapsed">{{faq.question}} -- Index: {{ forloop.index }} <em class="bx bx-chevron-down icon-show"></em><em
