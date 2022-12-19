@@ -154,7 +154,6 @@ question: <question text>
 ---
 <response text>
 ```
-
 The FAQ page is build from this collection by the `faqs.html`
 file using Jekyll / Liquid scripting. The sequence of FAQs on the
 page is controlled by the number portion of the individual FAQ
@@ -172,6 +171,12 @@ faq_110, faq_120) to simplify adding or re-sequencing the FAQs.
  - **To re-order the FAQs**: rename the relevant FAQ file(s) by
    changing the numeric portion of the filename to adjust the
    sequence.
+
+Notes:
+1) The question portion of the FAQ file should be plain text
+   without formatting and without any web links
+2) Complete URLs should be employed when placing web links in FAQ
+   responses; relative URLs within the website should be avoided.
 
 ## How to run the website on your local computer
 
