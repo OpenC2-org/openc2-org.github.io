@@ -28,7 +28,7 @@ permalink: /faqs.html
             <em class="bx bx-help-circle icon-help"></em> <a data-toggle="collapse" class={% if forloop.index == 1 %}"collapse"{% else %}"collapsed"{% endif %}
               href="#faq-list-{{ forloop.index }}">{{faq.question}} -- Index: {{ forloop.index }} <em class="bx bx-chevron-down icon-show"></em><em
                 class="bx bx-chevron-up icon-close"></em></a>
-            <div id="faq-list-{{ forloop.index }}" class="collapse show" data-parent=".faq-list">
+            <div id="faq-list-{{ forloop.index }}" class={% if forloop.index == 1 %}"collapse show"{% else %}"collapse"{% endif %} data-parent=".faq-list">
                 {{ faq.content }}
             </div>
           </li>
@@ -38,3 +38,4 @@ permalink: /faqs.html
         </div>
     </section><!-- End Frequently Asked Questions Section -->
 </main><!-- End #main -->
+
