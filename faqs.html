@@ -5,12 +5,14 @@ pageHeading: Frequently Asked Questions
 permalink: /faqs.html
 ---
 
-<!-- ======= Tags to Block Caching (for test purposes) ======= -->
+<!-- ======= Tags to Block Caching (for test purposes) =======
 
-<meta http-equiv='cache-control' content='no-cache'> 
-<meta http-equiv='expires' content='0'> 
-<meta http-equiv='pragma' content='no-cache'>
-
+<!--
+  <meta http-equiv='cache-control' content='no-cache'> 
+  <meta http-equiv='expires' content='0'> 
+  <meta http-equiv='pragma' content='no-cache'>
+ -->
+ 
 <main id="main">
 
 
@@ -26,7 +28,7 @@ permalink: /faqs.html
             {% for faq in sorted_array %}
           <li data-aos="fade-up">
             <em class="bx bx-help-circle icon-help"></em> <a data-toggle="collapse" class={% if forloop.index == 1 %}"collapse"{% else %}"collapsed"{% endif %}
-              href="#faq-list-{{ forloop.index }}">{{faq.question}} -- Index: {{ forloop.index }} <em class="bx bx-chevron-down icon-show"></em><em
+              href="#faq-list-{{ forloop.index }}">{{faq.question}}<em class="bx bx-chevron-down icon-show"></em><em
                 class="bx bx-chevron-up icon-close"></em></a>
             <div id="faq-list-{{ forloop.index }}" class={% if forloop.index == 1 %}"collapse show"{% else %}"collapse"{% endif %} data-parent=".faq-list">
                 {{ faq.content }}
