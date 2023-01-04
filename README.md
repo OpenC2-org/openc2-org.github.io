@@ -1,34 +1,30 @@
 # About this website
 
-This website was created using [Jekyll](https://jekyllrb.com/) and hosted using GitHub Pages.
+This website was created using [Jekyll](https://jekyllrb.com/)
+and hosted using GitHub Pages. This page documents the
+implementation and maintenance of the website.
 
-The source can be found at [https://github.com/OpenC2-org/openc2-org.github.io](https://github.com/OpenC2-org/openc2-org.github.io).
+The source can be found at
+[https://github.com/OpenC2-org/openc2-org.github.io](https://github.com/OpenC2-org/openc2-org.github.io).
 
 Additions/corrections/suggestions are welcome.
 
-## How to run the website on your local computer
+Contents of this README.md file:
+ - [Website Structure](#website-structure)
+ - [Maintenance Procedures](#maintaining-the-website)
+   - [Home page
+     carousel](#how-to-addremove-slides-in-the-carousel-on-the-homepage)
+   - [In The News
+     timeline](#how-to-change-the-timeline-in-openc2-in-the-news-page)
+   - [FAQ
+     Page](#how-to-update-the-frequently-asked-questions-faq-page)
+ - [Running the website
+   locally](#how-to-run-the-website-on-your-local-computer)
+ - [Contributing](#contributing)
 
-- Make sure to install [Jekyll](https://jekyllrb.com/) on your computer using the [instructions](https://jekyllrb.com/docs/) provided on their website.
-- In the Terminal, run this command to check if Jekyll is installed. It is recommended to install v4.1.1 and above.
-```
-jekyll -v
-```
-- Clone the OpenC2 Website repo [https://github.com/OpenC2-org/openc2-org.github.io](https://github.com/OpenC2-org/openc2-org.github.io) to your computer.
-
-```bash
-cd openc2-org.github.io
-
-jekyll serve
-```
-- Running ```jekyll serve``` creates a folder called ```_site``` under the folder ```openc2-org.github.io```. Jekyll uses this folder content to serve the website locally. The folder ```_site``` should not be checked into the repository.
-
-- Browse the website by going to this URL. Make sure to stop the server and run again each time a change is made to the ```_config.yml``` file.
-
-```
-http://127.0.0.1:4000/openc2-org.github.io/
-```
 ## Website Structure
-
+The folder and file organization of the website source is shown
+here:
 ```
 .
 +-- _includes
@@ -38,6 +34,11 @@ http://127.0.0.1:4000/openc2-org.github.io/
 +-- _layouts
 |   -- default.html                 # Contains HTML and Jekyll code to implement a re-usable page layout. (Used for index.html)
 |   -- page.html                    # Imports the layout used for default.html and adds extra layout to present inner HTML pages.
+|
++-- _faqs                           # Folder for collection of FAQ files used to build the FAQ page
+|   +-- faq_100.md                  # First FAQ question / response.
+|   +-- faq_110.md                  # Second FAQ question / response.
+|   +-- faq_xxx.md                  # additional FAQ question / response files
 +-- _sass
 |   +-- main.scss                   # Contains re-usable SASS properties for the website.
 +-- assets
@@ -77,7 +78,7 @@ http://127.0.0.1:4000/openc2-org.github.io/
 -- CNAME                             # Contains Domain name of the OpenC2 website.
 -- _config.yml                       # Jekyll configuration for this website. Requires Server Restart each time it's changed.
 -- contact.html                      # https://openc2.org/contact.html
--- faq.html                          # Frequently asked Questions
+-- faqs.html                         # Automation page to build Frequently Asked Questions from _faqs collection
 -- favicon.ico
 -- index.html                        # HomePage of this website.
 -- joinus.html                       # Join Us
@@ -92,12 +93,19 @@ http://127.0.0.1:4000/openc2-org.github.io/
 
 ```
 
-## How to add/remove slides in the carousel on the homepage?
-```index.html``` is the homepage and it uses [Bootstrap Carousel](https://getbootstrap.com/docs/4.0/components/carousel). Please refer to it's documentation to learn more about it.
+## Maintaining the Website
 
-To add a new slide to the carousel, create a HTML content file in ```content/homepage/carousel``` folder similar to other ```slide-*.html``` files
+### How to add/remove slides in the carousel on the homepage?
+```index.html``` is the homepage and it uses [Bootstrap
+Carousel](https://getbootstrap.com/docs/4.0/components/carousel).
+Please refer to it's documentation to learn more about it.
 
-Open ```index.html``` and add the HTML code inside the ```carousel-inner``` section to reflect the following change.
+To add a new slide to the carousel, create a HTML content file in
+```content/homepage/carousel``` folder similar to other
+```slide-*.html``` files
+
+Open ```index.html``` and add the HTML code inside the
+```carousel-inner``` section to reflect the following change.
 
 ```
         <!-- Slide 5 -->
@@ -112,12 +120,16 @@ Open ```index.html``` and add the HTML code inside the ```carousel-inner``` sect
         </div>
 ```
 
-To remove unwanted slides, delete the HTML code and content file for the unused slide.
+To remove unwanted slides, delete the HTML code and content file
+for the unused slide.
 
-## How to change the timeline in "OpenC2 in the news" page?
+### How to change the timeline in "OpenC2 in the news" page?
 ```news.html``` is the page where a timeline is present.
 
-To add or remove cards in the timeline, Open ```news.html``` and find the date you would like to insert a new card and copy paste this HTML. Please make sure to change the Date and Link as necessary.
+To add or remove cards in the timeline, Open ```news.html``` and
+find the date you would like to insert a new card and copy paste
+this HTML. Please make sure to change the Date and Link as
+necessary.
 
 ```
 <div class="timecard" data-aos="fade-up">
@@ -132,6 +144,74 @@ To add or remove cards in the timeline, Open ```news.html``` and find the date y
 </div>
 ```
 
+### How to update the Frequently Asked Questions (FAQ) page?
+The `_faqs` folder contains the collection of FAQs, stored one
+per file in Markdown format. The file structure is simple:
+
+```
+---
+question: <question text>
+---
+<response text>
+```
+The FAQ page is build from this collection by the `faqs.html`
+file using Jekyll / Liquid scripting. The sequence of FAQs on the
+page is controlled by the number portion of the individual FAQ
+file names. The number is deliberately spaces (i.e., faq_100,
+faq_110, faq_120) to simplify adding or re-sequencing the FAQs.
+
+ - **To add an FAQ**: add a new file in the `_faqs` folder, using
+   the `faq_nnn.md` filenaming convention, where the value of
+   `nnn` places the FAQ in the desired order. Populate the
+   question text in the header and the response text in the body.
+ - **To update an FAQ**: edit the question text in the header
+   and/or the response text in the body of the corresponding FAQ
+   file.
+ - **To delete an FAQ**:  delete the corresponding FAQ file
+ - **To re-order the FAQs**: rename the relevant FAQ file(s) by
+   changing the numeric portion of the filename to adjust the
+   sequence.
+
+Notes:
+1) The question portion of the FAQ file should be plain text
+   without formatting and without any web links
+2) Complete URLs should be employed when placing web links in FAQ
+   responses; relative URLs within the website should be avoided.
+
+## How to run the website on your local computer
+
+- Make sure to install [Jekyll](https://jekyllrb.com/) on your
+  computer using the [instructions](https://jekyllrb.com/docs/)
+  provided on their website.
+- In the Terminal, run this command to check if Jekyll is
+  installed. It is recommended to install v4.1.1 and above.
+```
+jekyll -v
+```
+- Clone the OpenC2 Website repo
+  [https://github.com/OpenC2-org/openc2-org.github.io](https://github.com/OpenC2-org/openc2-org.github.io)
+  to your computer.
+
+```bash
+cd openc2-org.github.io
+
+jekyll serve
+```
+- Running ```jekyll serve``` creates a folder called ```_site```
+  under the folder ```openc2-org.github.io```. Jekyll uses this
+  folder content to serve the website locally. The folder
+  ```_site``` should not be checked into the repository.
+
+- Browse the website by going to this URL. Make sure to stop the
+  server and run again each time a change is made to the
+  ```_config.yml``` file.
+
+```
+http://127.0.0.1:4000/openc2-org.github.io/
+```
+
+
 ## Contributing
-Pull requests are welcome. To request changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome. To request changes, please open an
+issue first to discuss what you would like to change.
 
