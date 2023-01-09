@@ -36,9 +36,9 @@ here:
 |   -- page.html                    # Imports the layout used for default.html and adds extra layout to present inner HTML pages.
 |
 +-- _faqs                           # Folder for collection of FAQ files used to build the FAQ page
-|   +-- faq_100.md                  # First FAQ question / response.
-|   +-- faq_110.md                  # Second FAQ question / response.
-|   +-- faq_xxx.md                  # additional FAQ question / response files
+|   +-- faq_100-<faq>.md            # First FAQ question / response.
+|   +-- faq_110-<faq>.md            # Second FAQ question / response.
+|   +-- faq_xxx-<faq>.md            # additional FAQ question / response files
 +-- _sass
 |   +-- main.scss                   # Contains re-usable SASS properties for the website.
 +-- assets
@@ -157,13 +157,27 @@ question: <question text>
 The FAQ page is build from this collection by the `faqs.html`
 file using Jekyll / Liquid scripting. The sequence of FAQs on the
 page is controlled by the number portion of the individual FAQ
-file names. The number is deliberately spaces (i.e., faq_100,
+file names. The numbering is deliberately spaced (i.e., faq_100,
 faq_110, faq_120) to simplify adding or re-sequencing the FAQs.
 
+The `faq_XXX` filenames can be extended with "explainer"
+information to make it easier to identify FAQs from their
+filenames. Some examples:
+
+ - `faq_100-W-I-OpenC2.md` -- FAQ file containing the "What is
+   OpenC2?" FAQ and response
+ - `faq_200-RT-CACAO.md` -- FAQ file containing the "How does
+   OpenC2 relate to CACAO?" FAQ and response
+
+Shorthand conventions in this filename scheme include `-W-I-` for
+"What Is", and `-RT-` for "relate to" questions.
+
+*FAQ Maintenance Procedures*
+
  - **To add an FAQ**: add a new file in the `_faqs` folder, using
-   the `faq_nnn.md` filenaming convention, where the value of
+   the `faq_nnn.md` file naming convention, where the value of
    `nnn` places the FAQ in the desired order. Populate the
-   question text in the header and the response text in the body.
+   question text in the header and the response text in the body, as described above.
  - **To update an FAQ**: edit the question text in the header
    and/or the response text in the body of the corresponding FAQ
    file.
@@ -177,6 +191,8 @@ Notes:
    without formatting and without any web links
 2) Complete URLs should be employed when placing web links in FAQ
    responses; relative URLs within the website should be avoided.
+3) From purposes of FAQ sequencing, the "explainer" portion of
+   the filename is irrelevant.
 
 ## How to run the website on your local computer
 

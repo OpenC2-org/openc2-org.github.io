@@ -1,5 +1,5 @@
 ---
-question: How does OpenC2 relate to the Open Cybersecurity Alliance?
+question: How does OpenC2 relate to the Open Cybersecurity Alliance (OCA)?
 ---
 
 The [Open Cybersecurity Alliance
