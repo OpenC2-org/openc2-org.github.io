@@ -10,17 +10,14 @@ The source can be found at
 Additions/corrections/suggestions are welcome.
 
 Contents of this README.md file:
- - [Website Structure](#website-structure)
- - [Maintenance Procedures](#maintaining-the-website)
-   - [Home page
-     carousel](#how-to-addremove-slides-in-the-carousel-on-the-homepage)
-   - [In The News
-     timeline](#how-to-change-the-timeline-in-openc2-in-the-news-page)
-   - [FAQ
-     Page](#how-to-update-the-frequently-asked-questions-faq-page)
- - [Running the website
-   locally](#how-to-run-the-website-on-your-local-computer)
- - [Contributing](#contributing)
+- [About this website](#about-this-website)
+  - [Website Structure](#website-structure)
+  - [Maintaining the Website](#maintaining-the-website)
+    - [How to add/remove slides in the carousel on the homepage?](#how-to-addremove-slides-in-the-carousel-on-the-homepage)
+    - [How to update the news timeline in "OpenC2 in the news" page?](#how-to-update-the-news-timeline-in-openc2-in-the-news-page)
+    - [How to update the Frequently Asked Questions (FAQ) page?](#how-to-update-the-frequently-asked-questions-faq-page)
+  - [How to run the website on your local computer](#how-to-run-the-website-on-your-local-computer)
+  - [Contributing](#contributing)
 
 ## Website Structure
 The folder and file organization of the website source is shown
