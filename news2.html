@@ -1,0 +1,33 @@
+---
+layout: page
+title: OpenC2 in the News
+pageHeading: OpenC2 in the News
+permalink: /news2.html
+---
+
+<main id="main">
+  <section class="features">
+    <div class="timeline" data-aos="fade-in">
+
+<!-- build news array from news item files, reverse sort for latest first  -->
+{% assign news_array = site.news | sort: "sort-date" | reverse %} 
+
+<!-- loop through sorted news array  -->
+{% for newsitem in news_array %}
+
+      <div class="timecard"  data-aos="fade-up">
+        <div class="content">
+          <h6>{{ newsitem.screen-date }}</h6>
+          <p>
+            <a rel="noopener noreferrer" target="_blank" href="{{ newsitem.title-url }}">{{ newsitem.title }}</a>.
+              <br>
+              {{ newsitem.content }}
+          </p>
+        </div>
+      </div>
+
+{% endfor %}
+
+    </div>
+  </section>
+</main>

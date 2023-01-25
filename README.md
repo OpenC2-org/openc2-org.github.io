@@ -39,6 +39,10 @@ here:
 |   +-- faq_100-<faq>.md            # First FAQ question / response.
 |   +-- faq_110-<faq>.md            # Second FAQ question / response.
 |   +-- faq_xxx-<faq>.md            # additional FAQ question / response files
++-- _news                           # Folder for collection of news item files used to build the OpenC2 In The News page
+|   +-- news_20200127.md            # News item for January 27, 2020
+|   +-- news_20200306.md            # News item for March 6, 2020
+|   +-- news_xxxxxxxx.md            # additional news item files
 +-- _sass
 |   +-- main.scss                   # Contains re-usable SASS properties for the website.
 +-- assets
@@ -123,26 +127,72 @@ Open ```index.html``` and add the HTML code inside the
 To remove unwanted slides, delete the HTML code and content file
 for the unused slide.
 
-### How to change the timeline in "OpenC2 in the news" page?
-```news.html``` is the page where a timeline is present.
-
-To add or remove cards in the timeline, Open ```news.html``` and
-find the date you would like to insert a new card and copy paste
-this HTML. Please make sure to change the Date and Link as
-necessary.
+### How to update the news timeline in "OpenC2 in the news" page?
+The `_news` folder contains the collection of individual news
+item files, stored one per file in Markdown format. The file
+structure is simple:
 
 ```
-<div class="timecard" data-aos="fade-up">
-    <div class="content">
-        <h6>March 06, 2020</h6>.  <!-- This section has the date of the entry -->
-            <p> <!-- This section has the content of the entry -->
-               <a rel="noopener noreferrer" target="_blank" href="https://codesync.global/media/making-iot-safer-with-beam-otp-cbf20/">
-              Making IoT safer with BEAM OTP
-              </a>
-            </p>
-     </div>
-</div>
+---
+screen-date:  Month dd, yyyy
+sort-date: yyyymmdd
+title: 
+title-url: 
+
+---
+<news item text>
 ```
+where
+ - `screen-date` is the date the event occurred, which will be
+   displayed for the item on the *In The News* page
+ - `sort-date` is the same date in a format that permits sorting
+   the news items by date
+ - `title` is the title text that will be displayed for the item
+   on the *In The News* page
+ - `title-url` is the website that the news item title text will
+   link to
+ - `<news item text>` is the content that will display below the
+   date and title; content can include additional web links
+
+News item files are named `news_YYYYMMDD.md`; if multiple news
+items occur on the same date, the convention is to append a
+letter ("a", "b", etc.) to the filename to assign unique
+filenames. The filenames are not significant to the sorting of
+news items; that is controlled by the `sort-date` property in the
+front matter.
+
+The "OpenC2 In The News" page is built from this collection by
+the `news.html` file using Jekyll / Liquid scripting, generating
+the ```news.html``` page on the website where the timeline is
+presented. 
+
+*In The News Maintenance Procedures*
+
+ - **To add a news item**: add a new file in the `_news` folder,
+   using the `news_YYYYMMDD.md` file naming convention described
+   above (opening an existing item and doing a *Save As* to the
+   new filename is the easiest method). Populate the four fields
+   in the news item front matter and the news item text in the
+   body appropriately, as described above.
+ - **To update a news item**: edit the properties in the front
+   matter and/or the news item text in the body of the
+   corresponding news item file.
+ - **To delete a news item**:  delete the corresponding news item
+   file.
+ - **To re-order the news item**: change the `sort-date` value(s)
+   in the relevant news item file(s) to adjust the sorting
+   sequence.
+
+Notes:
+1) The `title` property in the front matter *cannot* contain a
+   colon (":"), as this causes a parsing error resulting in a
+   blank title for the news item on the In The News page; use a
+   dash ("-") instead.
+2) Complete URLs should be employed when placing web links in
+   news item bodies; relative URLs within the website should be
+   avoided.
+
+
 
 ### How to update the Frequently Asked Questions (FAQ) page?
 The `_faqs` folder contains the collection of FAQs, stored one
@@ -154,7 +204,7 @@ question: <question text>
 ---
 <response text>
 ```
-The FAQ page is build from this collection by the `faqs.html`
+The FAQ page is built from this collection by the `faqs.html`
 file using Jekyll / Liquid scripting. The sequence of FAQs on the
 page is controlled by the number portion of the individual FAQ
 file names. The numbering is deliberately spaced (i.e., faq_100,
