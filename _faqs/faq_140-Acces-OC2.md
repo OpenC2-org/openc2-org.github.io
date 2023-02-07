@@ -1,5 +1,5 @@
 ---
-question: How can I access OpenC2?
+question: How can I access OpenC2 and JADN?
 ---
 
 OASIS Specifications are open for all to use. The TC's [home page
