@@ -76,7 +76,8 @@ permalink: /
     <div class="container">
       <div class="section-title">
         <h2>Open Command and Control (OpenC2)</h2>
-        <p class="section-subtitle"><em>Creating a standardized language for the command and control of technologies that
+        <p class="section-subtitle"><em>Creating a standardized language for the command and control of technologies
+            that
             provide or support cyber defenses.</em></p>
       </div>
       <div class="row" data-aos="fade-up">
@@ -96,7 +97,8 @@ permalink: /
         <div class="col-md-6 pt-3 order-2 order-md-1">
           <h3>Current Cyberdefense</h3>
           <p>
-            {% capture p2 %}{% include_relative content/homepage/current-cyberdefense.md %}{% endcapture %}{{ p2 | markdownify }}
+            {% capture p2 %}{% include_relative content/homepage/current-cyberdefense.md %}{% endcapture %}{{ p2 |
+            markdownify }}
           </p>
         </div>
       </div>
@@ -108,7 +110,8 @@ permalink: /
         <div class="col-md-6 pt-3">
           <h3>OpenC2 for Defense in Cyber-Relevant Time</h3>
           <p>
-            {% capture p3 %}{% include_relative content/homepage/defense-cybertime.md %}{% endcapture %}{{ p3 | markdownify }}
+            {% capture p3 %}{% include_relative content/homepage/defense-cybertime.md %}{% endcapture %}{{ p3 |
+            markdownify }}
           </p>
         </div>
       </div>
@@ -147,22 +150,52 @@ permalink: /
             <div id="faq-list-1" class="collapse show" data-parent=".faq-list">
               <p>
                 OpenC2 is a standardized language for machine-to-machine communications for the command and control of
-                technologies that provide or support cyber defenses.
+                technologies that provide or support cyber defenses. The <a
+                  href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=openc2">OpenC2 Technical
+                  Committee</a> is developing a suite of specifications that define the OpenC2 architecture, language,
+                tailor its use to specific cyber-defense functions, and specify how to convey OpenC2 messages using
+                various industry-standard transfer protocols.
               </p>
             </div>
           </li>
 
           <li data-aos="fade-up" data-aos-delay="100">
             <em class="bx bx-help-circle icon-help"></em> <a data-toggle="collapse" href="#faq-list-2"
-              class="collapsed">What is the difference between OpenC2 and OASIS? <em
+              class="collapsed">How is the "suite" of OpenC2 Specifications organized?<em
                 class="bx bx-chevron-down icon-show"></em><em class="bx bx-chevron-up icon-close"></em></a>
             <div id="faq-list-2" class="collapse" data-parent=".faq-list">
               <p>
-                OpenC2 is an open source language, available for use and input across the cyber-security community. Many
-                open source languages and technologies benefit from support of standards bodies, to help guide and
-                champion on-going use and evolution of the software or technology. OpenC2 is a project under OASIS.
-                OASIS is the Organization for the Advancement of Structured Information Standards, a nonprofit
-                international consortium that develops open IT standards.
+                As described in the <a
+                  href="https://docs.oasis-open.org/openc2/oc2arch/v1.0/oc2arch-v1.0.html"><em>OpenC2 Architecture
+                    Specification</em></a>, there are multiple types of OpenC2 specifications, meant to be used in
+                concert:</p>
+              <ul>
+                <li>
+                  <p>The <a href="https://docs.oasis-open.org/openc2/oc2arch/v1.0/oc2arch-v1.0.html"><em>OpenC2
+                        Architecture Specification</em></a> describes the fundamental structures of OpenC2.</p>
+                </li>
+                <li>
+                  <p>The <a href="https://docs.oasis-open.org/openc2/oc2ls/v1.0/oc2ls-v1.0.html"><em>OpenC2 Language
+                        Specification</em></a> provides the essential elements of the language, the structure for
+                    Commands and Responses, and the mechanisms for extending the OpenC2 language.</p>
+                </li>
+                <li>
+                  <p><a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=openc2#technical"><strong>OpenC2
+                        Actuator Profiles</strong></a> specify the subset of the OpenC2 language relevant in the context
+                    of specific actuator functions (e.g., <a
+                      href="https://docs.oasis-open.org/openc2/oc2slpf/v1.0/oc2slpf-v1.0.html">packet filtering</a>,
+                    honeypots).</p>
+                </li>
+                <li>
+                  <p><a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=openc2#technical"><strong>OpenC2
+                        Transfer Specifications</strong></a> utilize existing protocols and standards (e.g., <a
+                      href="https://docs.oasis-open.org/openc2/open-impl-https/v1.1/cs01/open-impl-https-v1.1-cs01.html">HTTPS</a>,
+                    <a href="https://docs.oasis-open.org/openc2/transf-mqtt/v1.0/transf-mqtt-v1.0.html">MQTT</a>) to
+                    implement OpenC2 message transfer in specific environments.
+                  </p>
+                </li>
+              </ul>
+
               </p>
             </div>
           </li>
@@ -183,13 +216,37 @@ permalink: /
 
           <li data-aos="fade-up" data-aos-delay="200">
             <em class="bx bx-help-circle icon-help"></em> <a data-toggle="collapse" href="#faq-list-4"
-              class="collapsed">How can I access OpenC2?<em class="bx bx-chevron-down icon-show"></em><em
+              class="collapsed">What is JADN?<em class="bx bx-chevron-down icon-show"></em><em
                 class="bx bx-chevron-up icon-close"></em></a>
             <div id="faq-list-4" class="collapse" data-parent=".faq-list">
               <p>
-                OASIS Specifications are open for all to use. See <a rel="noopener noreferrer" href="{{ site.baseurl }}/specifications.html">this page</a> for the specifications. 
+                <a href="https://docs.oasis-open.org/openc2/jadn/v1.0/cs01/jadn-v1.0-cs01.html">JSON Abstract Data
+                  Notation (JADN)</a> is a UML-based information modeling language that defines information requirements
+                and data structure independently of data format. JADN was created by the OpenC2 TC to assist with
+                defining OpenC2 information models for the language and actuator profiles in a way that supports the
+                language's goal of enabling machine-to-machine communications for purposes of command and control of
+                cyber defense components, subsystems and/or systems in a manner that is agnostic of the serialization
+                formats.
               </p>
-              <p>Open source software to implement OpenC2 can be found <a rel="noopener noreferrer" href="{{ site.baseurl }}/opensource.html">in this page</a>.</p>
+            </div>
+          </li>
+
+
+          <li data-aos="fade-up" data-aos-delay="200">
+            <em class="bx bx-help-circle icon-help"></em> <a data-toggle="collapse" href="#faq-list-4"
+              class="collapsed">How can I access OpenC2 and JADN?<em class="bx bx-chevron-down icon-show"></em><em
+                class="bx bx-chevron-up icon-close"></em></a>
+            <div id="faq-list-4" class="collapse" data-parent=".faq-list">
+              <p>
+                OASIS Specifications are open for all to use. The TC's <a
+                  href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=openc2">home page at OASIS</a> lists
+                the <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=openc2#technical">officially
+                  published specifications</a>. This website includes a list of all <a
+                  href="https://openc2.org/openc2-org.github.io/specifications.html">OpenC2 specifications (published
+                  and under development)</a>, and a collection of <a
+                  href="https://openc2.org/openc2-org.github.io/opensource.html">open source software tooling</a> to add
+                in implementing OpenC2.
+              </p>
             </div>
           </li>
 
