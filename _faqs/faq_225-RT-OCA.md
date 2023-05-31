@@ -12,4 +12,5 @@ being used on the OCA
 as the preferred C2 mechanism, and development has started on a
 threat hunting AP for OpenC2 to invoke OCA's
 [Kestrel](https://github.com/opencybersecurityalliance/kestrel-lang)
-language.
+language. OpenC2 TC member organizations also participate in the [Cybersecrity Automation Sub-Project
+(CASP)](https://opencybersecurityalliance.org/casp/).
