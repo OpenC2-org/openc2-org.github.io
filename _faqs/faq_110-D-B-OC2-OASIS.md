@@ -2,7 +2,7 @@
 question: What is the difference between OpenC2 and OASIS?
 ---
 
-[OpenC2](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=openc2)
+[OpenC2](https://groups.oasis-open.org/communities/tc-community-home2?CommunityKey=a34c9baf-48b2-44c5-a567-018dc7d32296)
 is an open source language, available for use and input across
 the cyber-security community. Many open source languages and
 technologies benefit from support of standards bodies, to help

@@ -18,14 +18,14 @@ used in concert:
   the OpenC2 language.
 
 * [**OpenC2 Actuator
-  Profiles**](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=openc2#technical)
+  Profiles**](https://groups.oasis-open.org/communities/tc-community-home2?CommunityKey=a34c9baf-48b2-44c5-a567-018dc7d32296#technical)
   specify the subset of the OpenC2 language relevant in the
   context of specific actuator functions (e.g., [packet
   filtering](https://docs.oasis-open.org/openc2/oc2slpf/v1.0/oc2slpf-v1.0.html),
   honeypots).
 
 * [**OpenC2 Transfer
-  Specifications**](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=openc2#technical)
+  Specifications**](https://groups.oasis-open.org/communities/tc-community-home2?CommunityKey=a34c9baf-48b2-44c5-a567-018dc7d32296#technical)
   utilize existing protocols and standards (e.g.,
   [HTTPS](https://docs.oasis-open.org/openc2/open-impl-https/v1.1/cs01/open-impl-https-v1.1-cs01.html),
   [MQTT](https://docs.oasis-open.org/openc2/transf-mqtt/v1.0/transf-mqtt-v1.0.html))
