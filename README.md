@@ -216,8 +216,9 @@ filenames. Some examples:
  - `faq_200-RT-CACAO.md` -- FAQ file containing the "How does
    OpenC2 relate to CACAO?" FAQ and response
 
-Shorthand conventions in this filename scheme include `-W-I-` for
-"What Is", and `-RT-` for "relate to" questions.
+Shorthand conventions in this filename scheme include `-W-I-` for "What Is", and
+`-RT-` for "relate to" questions. For purposes of FAQ sequencing, the
+"explainer" portion of the filename is irrelevant.
 
 *FAQ Maintenance Procedures*
 
@@ -238,8 +239,6 @@ Notes:
    without formatting and without any web links
 2) Complete URLs should be employed when placing web links in FAQ
    responses; relative URLs within the website should be avoided.
-3) From purposes of FAQ sequencing, the "explainer" portion of
-   the filename is irrelevant.
 
 ## How to run the website on your local computer
 
