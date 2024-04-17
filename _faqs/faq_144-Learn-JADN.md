@@ -3,7 +3,7 @@ question: How can I learn more about JADN?
 ---
 
 A brief introduction to JADN can be found in the [*JADN and
-OpenC2*]([JADN-and-OpenC2.md](https://github.com/oasis-tcs/openc2-tc-ops/blob/main/JADN-and-OpenC2.md)) document in the TC's [operations
+OpenC2*](https://github.com/oasis-tcs/openc2-tc-ops/blob/main/JADN-and-OpenC2.md) document in the TC's [operations
 repository](https://github.com/oasis-tcs/openc2-tc-ops). The TC
 has also developed a [Committee Note
 (CN)](https://www.oasis-open.org/policies-guidelines/oasis-defined-terms-2018-05-22/#dCommitteeNote)
