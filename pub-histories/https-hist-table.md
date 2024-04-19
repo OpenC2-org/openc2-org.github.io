@@ -1,6 +1,6 @@
 | **Version** |                       **Approval Level**                      | **Publication Date** |
 |:-----------:|:-------------------------------------------------------------:|:--------------------:|
-|   v1.1 WIP  | <a rel="noopener noreferrer" target="_blank" href="https://github.com/oasis-tcs/openc2-impl-https/blob/working/open-impl-https.md">Working Meeting: 8 Septenber 2021</a> |   8 September 2021   |
+|   v1.1 WIP  | <a rel="noopener noreferrer" target="_blank" href="https://github.com/oasis-tcs/openc2-impl-https/tree/working">Working Meeting: 8 Septenber 2021</a> |   8 September 2021   |
 |     v1.1    | <a rel="noopener noreferrer" target="_blank" href="https://docs.oasis-open.org/openc2/open-impl-https/v1.1/cs01/open-impl-https-v1.1-cs01.html">CS 01</a> |   30 November 2021   |
 |     v1.1    | <a rel="noopener noreferrer" target="_blank" href="https://docs.oasis-open.org/openc2/open-impl-https/v1.1/csd01/open-impl-https-v1.1-csd01.html">CSD 01</a> (public review) |   15 September 2021  |
 |     v1.0    | <a rel="noopener noreferrer" target="_blank" href="https://docs.oasis-open.org/openc2/open-impl-https/v1.0/open-impl-https-v1.0.html">CS 01</a> |     11 July 2019     |

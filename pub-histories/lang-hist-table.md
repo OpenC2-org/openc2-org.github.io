@@ -1,6 +1,6 @@
 | **Version** | **Approval Level** | **Publication Date** |
 |:---:|:---:|:---:|
-| v2.0 WIP | <a rel="noopener noreferrer" target="_blank" href="https://github.com/oasis-tcs/openc2-oc2ls/blob/working/oc2ls.md">Working Meeting: 4 January 2023</a> | 22 September 2021 |
+| v2.0 WIP | <a rel="noopener noreferrer" target="_blank" href="https://github.com/oasis-tcs/openc2-oc2ls/tree/working/">Working Meeting: 4 January 2023</a> | 22 September 2021 |
 | v2.0 | <a rel="noopener noreferrer" target="_blank" href="https://docs.oasis-open.org/openc2/oc2ls/v2.0/csd01/oc2ls-v2.0-csd01.html">CSD 01</a> | 16 November 2022 |
 | v1.1 | <a rel="noopener noreferrer" target="_blank" href="https://docs.oasis-open.org/openc2/oc2ls/v1.1/csd01/oc2ls-v1.1-csd01.html" >CSD 01</a>  | 18 August 2021 |
 | v1.0 | <a rel="noopener noreferrer" target="_blank" href="https://docs.oasis-open.org/openc2/oc2ls/v1.0/cs02/oc2ls-v1.0-cs02.html">CS 02</a>  | 24 November 2019 |
