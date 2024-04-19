@@ -337,52 +337,8 @@ permalink: /pubhist.html
         </p>
       </div>
 
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Version</th>
-            <th scope="col">Approval Level</th>
-            <th scope="col">Publication Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Version">v1.X WIP</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://github.com/oasis-tcs/openc2-jadn-im/blob/working/imjadn-v1.0-cn01.md"
-                >Working Meeting: 12 April 2023</a
-              >
-            </td>
-            <td data-label="Publication Date">12 April 2023</td>
-          <tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/imjadn/v1.0/imjadn-v1.0.html"
-                >CN 01</a
-              >
-            </td>
-            <td data-label="Publication Date">19 April 2023</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/imjadn/v1.0/cnd01/imjadn-v1.0-cnd01.html"
-                >CND 01</a> 
-            </td>
-            <td data-label="Publication Date">18 January 2023</td>
-          </tr>
-        </tbody>
-      </table>
+      {% capture t10 %}{% include_relative pub-histories/jadn-im-cn-hist-table.md %}{% endcapture %}{{ t10 | markdownify }}  
+
       <br /><br />
     </div>
   </section>
