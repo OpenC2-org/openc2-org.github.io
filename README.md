@@ -13,9 +13,10 @@ Contents of this README.md file:
 - [About this website](#about-this-website)
   - [Website Structure](#website-structure)
   - [Maintaining the Website](#maintaining-the-website)
-    - [How to add/remove slides in the carousel on the homepage?](#how-to-addremove-slides-in-the-carousel-on-the-homepage)
-    - [How to update the news timeline in "OpenC2 in the news" page?](#how-to-update-the-news-timeline-in-openc2-in-the-news-page)
-    - [How to update the Frequently Asked Questions (FAQ) page?](#how-to-update-the-frequently-asked-questions-faq-page)
+    - [How to add/remove slides in the carousel on the homepage](#how-to-addremove-slides-in-the-carousel-on-the-homepage)
+    - [How to update the news timeline in "OpenC2 in the news" page](#how-to-update-the-news-timeline-in-openc2-in-the-news-page)
+    - [How to update the Frequently Asked Questions (FAQ) page](#how-to-update-the-frequently-asked-questions-faq-page)
+    - [How To Update the Publication History Page](#how-to-update-the-publication-history-page)
   - [How to run the website on your local computer](#how-to-run-the-website-on-your-local-computer)
   - [Contributing](#contributing)
 
@@ -69,6 +70,10 @@ here:
 |       -- defense-cybertime.md      # Markdown imported in "OpenC2 for Defense in Cyber-Relevant Time" paragraph in index.html
 |       -- openc2-help.md            # Markdown imported in "How can OpenC2 help?" paragraph in index.html
 |       -- vision.md                 # Markdown imported in "Vision" paragraph in index.html
++-- pub-histories
+|   -- ap-dev-cn-hist-table.md       # Markdown file with publication history for AP Development Committee Note.
+|   -- arch-hist-table.md            # Markdown file with publication history for Architecture Specifications.
+|   -- ...                           # Markdown files with publication history for other TC work products.
 +-- vectors
 |   -- attackspeed.ai                # Original illustration for the picture used in "Current CyberDefense".
 |   -- automate.ai                   # Original illustration for the picture used in "OpenC2 for Defense in Cyber-Relevant Time".
@@ -89,6 +94,7 @@ here:
 -- opensource.html                   # Opensource Software
 -- otc.html                          # OASIS OpenC2 Technical Committee
 -- otherdocumentation.html           # Other Documentation
+-- pubhist.html                      # Detailed publication histories of TC work products; imports from pub-histories folder
 -- README.md                         # Documentation on how to use/contribute to this website
 -- specifications.html               # Specifications
 
@@ -96,7 +102,7 @@ here:
 
 ## Maintaining the Website
 
-### How to add/remove slides in the carousel on the homepage?
+### How to add/remove slides in the carousel on the homepage
 ```index.html``` is the homepage and it uses [Bootstrap
 Carousel](https://getbootstrap.com/docs/4.0/components/carousel).
 Please refer to it's documentation to learn more about it.
@@ -124,7 +130,7 @@ Open ```index.html``` and add the HTML code inside the
 To remove unwanted slides, delete the HTML code and content file
 for the unused slide.
 
-### How to update the news timeline in "OpenC2 in the news" page?
+### How to update the news timeline in "OpenC2 in the news" page
 The `_news` folder contains the collection of individual news
 item files, stored one per file in Markdown format. The file
 structure is simple:
@@ -191,7 +197,7 @@ Notes:
 
 
 
-### How to update the Frequently Asked Questions (FAQ) page?
+### How to update the Frequently Asked Questions (FAQ) page
 The `_faqs` folder contains the collection of FAQs, stored one
 per file in Markdown format. The file structure is simple:
 
@@ -239,6 +245,34 @@ Notes:
    without formatting and without any web links
 2) Complete URLs should be employed when placing web links in FAQ
    responses; relative URLs within the website should be avoided.
+
+
+### How To Update the Publication History Page
+
+The publication histories are delivered via an HTML page (`pubhist.html`). Each
+TC work product has a section in the page which includes the title, a copy of
+the document's abstract, and a history for each publication stage showing
+version, publication identifier, and date. The publication history tables are
+contained in individual markdown files, one per work product, which are imported
+by `pubhist.html`. This simplified maintenance by eliminating the need to edit
+an HTML table, however the imported Markdown tables use HTML anchors to create
+web links that open in new tabs / windows (i.e., `target="_blank"`).
+
+ - To add a publication event to an existing work product: located and edit the
+   corresponding history table file in the `pub-histories` folder.
+ - To add a new work product:
+   - Update `pubhist.html`: Create a new section in the document for the new
+     work product (e.g., by copy / paste / edit of an existing section). If
+     copying an existing section, update the variable in the import statement
+     (`{% capture t10 %}...`) by incrementing the number and modifying the
+     imported filename to reflect the new work product.
+   - Create a new import history table under `pub-histories/`. Again this can be
+     done by copy / renamed / edit of an existing history table file. The
+     filename needs to match the name used in `pubhist.html`. 
+
+The first line of the publication history table always refers to the current
+work-in-progress version of the work product and should link to the working
+branch of the work product's TC repository on GitHub.
 
 ## How to run the website on your local computer
 
