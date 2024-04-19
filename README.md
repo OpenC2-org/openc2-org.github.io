@@ -254,25 +254,25 @@ TC work product has a section in the page which includes the title, a copy of
 the document's abstract, and a history for each publication stage showing
 version, publication identifier, and date. The publication history tables are
 contained in individual markdown files, one per work product, which are imported
-by `pubhist.html`. This simplified maintenance by eliminating the need to edit
+by `pubhist.html`. This simplifies maintenance by eliminating the need to edit
 an HTML table, however the imported Markdown tables use HTML anchors to create
 web links that open in new tabs / windows (i.e., `target="_blank"`).
 
- - To add a publication event to an existing work product: located and edit the
+ - **To add a publication event to an existing work product**: locate and edit the
    corresponding history table file in the `pub-histories` folder.
- - To add a new work product:
+ - **To add a new work product**:
    - Update `pubhist.html`: Create a new section in the document for the new
      work product (e.g., by copy / paste / edit of an existing section). If
-     copying an existing section, update the variable in the import statement
-     (`{% capture t10 %}...`) by incrementing the number and modifying the
+     copying an existing section, update the capture / import statement (`{%
+     capture t10 %}...`) by incrementing the variable number and modifying the
      imported filename to reflect the new work product.
-   - Create a new import history table under `pub-histories/`. Again this can be
-     done by copy / renamed / edit of an existing history table file. The
-     filename needs to match the name used in `pubhist.html`. 
+   - Create a new import history table file under `pub-histories/`. This can be
+     done by copy / rename / edit of an existing history table file. The
+     filename needs to match the name used in the new  `pubhist.html` section. 
 
 The first line of the publication history table always refers to the current
 work-in-progress version of the work product and should link to the working
-branch of the work product's TC repository on GitHub.
+branch of the work product's OASIS TC repository on GitHub.
 
 ## How to run the website on your local computer
 
