@@ -105,53 +105,8 @@ permalink: /pubhist.html
     </p>
   </div>
 
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Version</th>
-        <th scope="col">Approval Level</th>
-        <th scope="col">Publication Date</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="Version">v1.0 WIP</td>
-        <td data-label="Approval Level">
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/oasis-tcs/openc2-oc2arch/blob/working/oc2arch-v1.0.md"
-            >Working Meeting: 11 May 2022</a
-          >
-        </td>
-        <td data-label="Publication Date">11 May 2022</td>
-      <tr>
-        <tr>
-          <td data-label="Version">v1.0</td>
-          <td data-label="Approval Level">
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://github.com/oasis-tcs/openc2-oc2arch/blob/working/oc2arch-v1.0.md">
-              CS01
-            </a>
-          </td>
-          <td data-label="Publication Date">30 September 2022</td>
-        <tr>
-        <tr>
-        <td data-label="Version">v1.0</td>
-        <td data-label="Approval Level">
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://docs.oasis-open.org/openc2/oc2arch/v1.0/cs01/oc2arch-v1.0-cs01.html"
-            >CSD 01</a
-          >
-        </td>
-        <td data-label="Publication Date">18 May 2022</td>
-      </tr>
-    </tbody>
-  </table>
+  {% capture p3 %}{% include_relative pub-histories\arch-hist-table.md %}{% endcapture %}{{ p3 | markdownify }}  
+
   <br /><br />
 </div>
 
