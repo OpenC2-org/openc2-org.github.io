@@ -144,8 +144,6 @@ permalink: /pubhist.html
 
 <!--- Section for the Stateless Packet Filtering (SLPF) AP -->
 
-
-
     <div class="container" id="slpf AP">
       <div class="section-title">
         <h2>OpenC2 Actuator Profile for Stateless Packet Filtering (SLPF)</h2>
@@ -185,41 +183,8 @@ permalink: /pubhist.html
         </p>
       </div>
 
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Version</th>
-            <th scope="col">Approval Level</th>
-            <th scope="col">Publication Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Version">v1.0 WIP</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://github.com/oasis-tcs/openc2-ap-pf/blob/working/oc2pf.md"
-                >Working Meeting: 8 Septenber 2021</a
-              >
-            </td>
-            <td data-label="Publication Date">8 September 2021</td>
-          <tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/ap-pf/v1.0/csd01/ap-pf-v1.0-csd01.html"
-                >CSD 01</a
-              >
-            </td>
-            <td data-label="Publication Date">21 July 2021</td>
-          </tr>
-        </tbody>
-      </table>
+      {% capture t4 %}{% include_relative pub-histories/pf-hist-table.md %}{% endcapture %}{{ t4 | markdownify }}  
+
       <br /><br />
     </div>
 
