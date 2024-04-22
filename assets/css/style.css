@@ -995,3 +995,17 @@ body {
   font-family: "Open Sans", arial, sans-serif;
   line-height: 1.5;
 }
+
+
+/* Add styles to adjust for the fixed header */ 
+/* This fixes ToC jumps to show doc titles   */
+/* source: https://www.geeksforgeeks.org/how-to-set-offset-an-html-anchor-element-to-adjust-fixed-header-in-css/, option 1  */ 
+   #target-element { 
+    display: block; 
+    position: relative; 
+    top: -70px; 
+      
+    /* Replace with the height of your fixed header */ 
+    visibility: hidden; 
+} 
+
