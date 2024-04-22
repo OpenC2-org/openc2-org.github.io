@@ -204,6 +204,34 @@ permalink: /pubhist.html
     </div>
 
 
+<!--- Section for the Threat Hunting AP -->
+
+<div class="container" id='TH-AP'>
+  <div class="section-title">
+    <h2>OpenC2 Actuator Profile for Threat Hunting (TH)</h2>
+    <p class="section-subtitle">
+      <i >OpenC2 Actuator Profiles specify the subset of the OpenC2 language
+      relevant in the context of specific actuator functions. This specification
+      defines an actuator profile to automate management of cyber threat hunting
+      activities using OpenC2. Threat hunting is the process of proactively and
+      iteratively searching through networks and on endpoints to detect and
+      isolate cyber observables that may indicate threats that evade existing
+      security solutions. This actuator profile defines the OpenC2 Actions,
+      Targets, Arguments, and Specifiers along with conformance clauses to
+      enable the operation of OpenC2 Producers and Consumers in the context of
+      cyber threat hunting. It covers the identification and invocation of
+      stored hunting processes (e.g., “hunt flows”), passing of hunt parameters,
+      and the expected type(s) and format(s) of information returned by hunting
+      processes.</i>
+    </p>
+  </div>
+
+  {% capture tTH %}{% include_relative pub-histories/th-hist-table.md %}{% endcapture %}{{ tTH | markdownify }}  
+
+  <br /><br />
+</div>
+
+
 <!--- Section for the MQTT Transfer Specification -->
 
 <div class="container" id="mqtt-ts">
