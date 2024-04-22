@@ -1003,7 +1003,7 @@ body {
    #target-element { 
     display: block; 
     position: relative; 
-    top: -70px; 
+    top: -80px; 
       
     /* Replace with the height of your fixed header */ 
     visibility: hidden; 
