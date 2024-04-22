@@ -125,6 +125,37 @@ permalink: /pubhist.html
 
 
 
+<!--- Section for the JADN Specification -->
+
+<div class="container" id="jadn-spec">
+      <div class="section-title">
+        <h2>Specification for JSON Abstract Data Notation (JADN)</h2>
+        <p class="section-subtitle">
+          <i>JSON Abstract Data Notation (JADN) is a UML-based
+          information modeling language that defines data
+          structure independently of data format. Information
+          models are used to define and generate physical data
+          models, validate information instances, and enable
+          lossless translation across data formats. A JADN
+          specification consists of two parts: type definitions
+          that comprise the information model, and serialization
+          rules that define how information instances are
+          represented as data. The information model is itself an
+          information instance that can be serialized and
+          transferred between applications. The model is
+          documented using a compact and expressive interface
+          definition language, property tables, or entity
+          relationship diagrams, easing integration with existing
+          design processes and architecture tools.
+          </i>
+        </p>
+      </div>
+
+      {% capture t9 %}{% include_relative pub-histories/jadn-hist-table.md %}{% endcapture %}{{ t9 | markdownify }}  
+
+      <br /><br />
+    </div>
+
 
 <!--- Section for the Stateless Packet Filtering (SLPF) AP -->
 
@@ -172,56 +203,25 @@ permalink: /pubhist.html
       <br /><br />
     </div>
 
-<!--- Section for the Posture Attribute Collection AP -->
 
-<div class="container" id='PAC-AP'>
+<!--- Section for the MQTT Transfer Specification -->
+
+<div class="container" id="mqtt-ts">
   <div class="section-title">
-    <h2>OpenC2 Actuator Profile for Posture Attribute Collection (PAC)</h2>
+    <h2>Specification for Transfer of OpenC2 Messages via MQTT</h2>
     <p class="section-subtitle">
-      <i> This specification defines an actuator profile to
-      automate collection of security posture attributes from
-      virtual and physical computing resources using OpenC2.
-      Security Posture Attribute Collection (PAC) supports
-      security automation by providing mechanisms to collect and
-      aggregate the configuration and status of network
-      components for use in situational awareness, security
-      posture evaluation, and response actions. This actuator
-      profile defines the OpenC2 Actions, Targets, Arguments, and
-      Specifiers along with conformance clauses to enable the
-      operation of OpenC2 Producers and Consumers in the context
-      of PAC. It covers identification of computing resources,
-      definition of security-relevant resource attributes, and
-      controlling the collection of those attributes using direct
-      pull or event-based push mechanisms.
+      <i >OpenC2 transfer specifications utilize existing
+      protocols and standards to implement OpenC2 in specific
+      environments. Message Queuing Telemetry Transport
+      (MQTT) is a widely-used publish / subscribe (pub/sub)
+      transfer protocol. This specification describes the use
+      of MQTT Version 5.0 as a transfer mechanism for OpenC2
+      messages.
       </i>
     </p>
   </div>
 
-  {% capture t5 %}{% include_relative pub-histories/pace-hist-table.md %}{% endcapture %}{{ t5 | markdownify }}  
-
-  <br /><br />
-</div>
-
-<!--- Section for the Actuator Profile Development CN -->
-
-<div class="container" id='cn-apdev'>
-  <div class="section-title">
-    <h2>OpenC2 Actuator Profile Development Process Version 1.0</h2>
-    <p class="section-subtitle">
-      <i> OpenC2 Actuator Profiles (APs) specify the subset
-      of the OpenC2 language relevant in the context of specific actuator
-      functions. A profile refines the meaning of language elements used to
-      perform the actuator function, and often defines additional elements that
-      are relevant and/or unique to that function. This Committee Note describes
-      the TC’s process for using the JSON Abstract Data Notation (JADN)
-      information modeling language in the development of APs, resulting in a
-      rigorous schema for an AP properly integrated with the base OpenC2
-      language.
-      </i>
-    </p>
-  </div>
-
-  {% capture t6 %}{% include_relative pub-histories/ap-dev-cn-hist-table.md %}{% endcapture %}{{ t6 | markdownify }}  
+  {% capture t8 %}{% include_relative pub-histories/mqtt-hist-table.md %}{% endcapture %}{{ t8 | markdownify }}  
 
   <br /><br />
 </div>
@@ -250,59 +250,9 @@ permalink: /pubhist.html
 
 
 
-    <div class="container" id="mqtt-ts">
-      <div class="section-title">
-        <h2>Specification for Transfer of OpenC2 Messages via MQTT</h2>
-        <p class="section-subtitle">
-          <i >OpenC2 transfer specifications utilize existing
-          protocols and standards to implement OpenC2 in specific
-          environments. Message Queuing Telemetry Transport
-          (MQTT) is a widely-used publish / subscribe (pub/sub)
-          transfer protocol. This specification describes the use
-          of MQTT Version 5.0 as a transfer mechanism for OpenC2
-          messages.
-          </i>
-        </p>
-      </div>
+<!--- Section for the JADN Information Modeling CN -->
 
-      {% capture t8 %}{% include_relative pub-histories/mqtt-hist-table.md %}{% endcapture %}{{ t8 | markdownify }}  
-
-      <br /><br />
-    </div>
-
-
-
-    <div class="container" id="jadn-spec">
-      <div class="section-title">
-        <h2>Specification for JSON Abstract Data Notation (JADN)</h2>
-        <p class="section-subtitle">
-          <i>JSON Abstract Data Notation (JADN) is a UML-based
-          information modeling language that defines data
-          structure independently of data format. Information
-          models are used to define and generate physical data
-          models, validate information instances, and enable
-          lossless translation across data formats. A JADN
-          specification consists of two parts: type definitions
-          that comprise the information model, and serialization
-          rules that define how information instances are
-          represented as data. The information model is itself an
-          information instance that can be serialized and
-          transferred between applications. The model is
-          documented using a compact and expressive interface
-          definition language, property tables, or entity
-          relationship diagrams, easing integration with existing
-          design processes and architecture tools.
-          </i>
-        </p>
-      </div>
-
-      {% capture t9 %}{% include_relative pub-histories/jadn-hist-table.md %}{% endcapture %}{{ t9 | markdownify }}  
-
-      <br /><br />
-    </div>
-
-
-    <div class="container" id="jadn-im">
+<div class="container" id="jadn-im">
       <div class="section-title">
         <h2>Information Modeling With JADN</h2>
         <p class="section-subtitle">
@@ -325,6 +275,33 @@ permalink: /pubhist.html
 
       <br /><br />
     </div>
+
+
+<!--- Section for the Actuator Profile Development CN -->
+
+<div class="container" id='cn-apdev'>
+  <div class="section-title">
+    <h2>OpenC2 Actuator Profile Development Process Version 1.0</h2>
+    <p class="section-subtitle">
+      <i> OpenC2 Actuator Profiles (APs) specify the subset
+      of the OpenC2 language relevant in the context of specific actuator
+      functions. A profile refines the meaning of language elements used to
+      perform the actuator function, and often defines additional elements that
+      are relevant and/or unique to that function. This Committee Note describes
+      the TC’s process for using the JSON Abstract Data Notation (JADN)
+      information modeling language in the development of APs, resulting in a
+      rigorous schema for an AP properly integrated with the base OpenC2
+      language.
+      </i>
+    </p>
+  </div>
+
+  {% capture t6 %}{% include_relative pub-histories/ap-dev-cn-hist-table.md %}{% endcapture %}{{ t6 | markdownify }}  
+
+  <br /><br />
+</div>
+
+
 
 
     <div class="container" id="table-details">
