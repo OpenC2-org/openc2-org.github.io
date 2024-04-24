@@ -1,0 +1,11 @@
+| **Version** |                       **Approval Level**                      | **Publication Date** |
+|:-----------:|:-------------------------------------------------------------:|:--------------------:|
+|   v1.1 WIP  | <a rel="noopener noreferrer" target="_blank" href="https://github.com/oasis-tcs/openc2-impl-https/tree/working">Working Meeting: 8 Septenber 2021</a> |   8 September 2021   |
+|     v1.1    | <a rel="noopener noreferrer" target="_blank" href="https://docs.oasis-open.org/openc2/open-impl-https/v1.1/cs01/open-impl-https-v1.1-cs01.html">CS 01</a> |   30 November 2021   |
+|     v1.1    | <a rel="noopener noreferrer" target="_blank" href="https://docs.oasis-open.org/openc2/open-impl-https/v1.1/csd01/open-impl-https-v1.1-csd01.html">CSD 01</a> (public review) |   15 September 2021  |
+|     v1.0    | <a rel="noopener noreferrer" target="_blank" href="https://docs.oasis-open.org/openc2/open-impl-https/v1.0/open-impl-https-v1.0.html">CS 01</a> |     11 July 2019     |
+|     v1.0    | <a rel="noopener noreferrer" target="_blank" href="https://docs.oasis-open.org/openc2/open-impl-https/v1.0/csprd03/open-impl-https-v1.0-csprd03.html">CSD 05 / PRD 03</a> |      21 May 2019     |
+|     v1.0    | <a rel="noopener noreferrer" target="_blank" href="https://docs.oasis-open.org/openc2/open-impl-https/v1.0/csprd02/open-impl-https-v1.0-csprd02.html">CSD 04 / PRD 02</a> |     04 April 2019    |
+|     v1.0    | <a rel="noopener noreferrer" target="_blank" href="https://docs.oasis-open.org/openc2/open-impl-https/v1.0/csprd01/open-impl-https-v1.0-csprd01.html">CSD 03 / PRD 01</a> |    17 October 2018   |
+|     v1.0    | <a rel="noopener noreferrer" target="_blank" href="https://docs.oasis-open.org/openc2/open-impl-https/v1.0/csd02/open-impl-https-v1.0-csd02.html">CSD 02</a> |    04 October 2018   |
+|     v1.0    | <a rel="noopener noreferrer" target="_blank" href="https://docs.oasis-open.org/openc2/open-impl-https/v1.0/csd01/open-impl-https-v1.0-csd01.html">CSD 01</a> |    23 August 2018    |

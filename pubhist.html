@@ -4,7 +4,7 @@ title: Publication History
 pageHeading: Publication History
 permalink: /pubhist.html
 ---
- 
+
 <main id="main">
   <section>
     <div class="container" id="introduction">
@@ -17,9 +17,325 @@ permalink: /pubhist.html
           with links to the most recent “approved” version as well as the
           current work-in-progress for the product. An entry is provided for
           each work product. For each document the reference includes the full
-          title, a brief descriptions, and a table
-          with the following information for “approved” versions:
+          title, a brief descriptions, and a table with dates and links for the
+          approved versions. with information for “approved” versions. Table
+          contents are ordered in reverse chronological order, newest version
+          first. An explanation of the table details can be found <a
+          href="#table-details">at the end of the page</a>
         </p>
+        <p>
+          The following documents histories are provided on this page. For
+          information regarding TC work products that have not yet reached the
+          Committee Specification Draft (CSD) level, consult the list of GitHub
+          repositories on the <a href="{{ site.baseurl }}/specifications.html">Specifications</a> page.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th><strong>Overarching Documents</strong></th>
+              <th><strong>Actuator Profiles</strong></th>
+              <th><strong>Transfer Specifications</strong></th>
+              <th><strong>Informative Work</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="#arch-spec">Architecture Specification</a></td>
+              <td><a href="#slpf-AP">Stateless Packet Filtering</a></td>
+              <td><a href="#mqtt-ts">MQTT</a></td>
+              <td><a href="#jadn-im">Information Modeling with JADN CN</a></td>
+            </tr>
+            <tr>
+              <td><a href="#lang-spec">Language Specification</a></td>
+              <td><a href="#PF-AP">Packet Filtering AP</a></td>
+              <td><a href="#https-ts">HTTPS</a></td>
+              <td><a href="#cn-apdev">Actuator Profile Development Process CN</a></td>
+            </tr>
+            <tr>
+              <td><a href="#jadn-spec">JSON Abstract Data Notation (JADN)</a></td>
+              <td><a href="#TH-AP">Threat Hunting AP</a></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+          </table>
+          <br><br>
+      </div>
+    </div>
+
+
+<!--- Tables are imported from external Markdown files to simplify maintenance -->
+<!--- Tables use HTML links to force opening in new tabs / windows  -->
+
+<!--- Section for the Architecture Specification -->
+
+<div class="container" id="arch-spec">
+  <div class="section-title">
+    <h2>OpenC2 Architecture Specification</h2>
+    <p class="section-subtitle">
+      <i>Cyber attacks are increasingly sophisticated, less
+      expensive to execute, dynamic and automated. The provision
+      of cyber defense via statically configured products
+      operating in isolation is untenable. Standardized
+      interfaces, protocols and data models will facilitate the
+      integration of the functional blocks within a system and
+      between systems. Open Command and Control (OpenC2) is a
+      concise and extensible language to enable
+      machine-to-machine communications for purposes of command
+      and control of cyber defense components, subsystems and/or
+      systems in a manner that is agnostic of the underlying
+      products, technologies, transport mechanisms or other
+      aspects of the implementation. The Architecture
+      Specification describes the abstract architecture of OpenC2
+      to define a common understanding of the messages and
+      interactions for all bindings and serializations.
+      </i>
+    </p>
+  </div>
+
+  {% capture t1 %}{% include_relative pub-histories/arch-hist-table.md %}{% endcapture %}{{ t1 | markdownify }}  
+
+  <br /><br />
+</div>
+
+
+
+<!--- Section for the Language Specification -->
+
+    <div class="container" id="lang-spec">
+      <div class="section-title">
+        <h2>Open Command and Control (OpenC2) Language Specification</h2>
+        <p class="section-subtitle">
+          <i
+            >The Language Specification is an overarching OpenC2 document, which
+            defines the basic conventions of the language, the set of available
+            actions, and the base set of targets to which actions can be
+            applied. This specification provides the semantics for the essential
+            elements of the language, the structure for commands and responses,
+            and the schema that defines the proper syntax for the language
+            elements that represents the command or response.
+          </i>
+        </p>
+      </div>
+
+      {% capture t2 %}{% include_relative pub-histories/lang-hist-table.md %}{% endcapture %}{{ t2 | markdownify }}  
+
+      <br /><br />
+    </div>
+
+
+
+<!--- Section for the JADN Specification -->
+
+<div class="container" id="jadn-spec">
+      <div class="section-title">
+        <h2>Specification for JSON Abstract Data Notation (JADN)</h2>
+        <p class="section-subtitle">
+          <i>JSON Abstract Data Notation (JADN) is a UML-based
+          information modeling language that defines data
+          structure independently of data format. Information
+          models are used to define and generate physical data
+          models, validate information instances, and enable
+          lossless translation across data formats. A JADN
+          specification consists of two parts: type definitions
+          that comprise the information model, and serialization
+          rules that define how information instances are
+          represented as data. The information model is itself an
+          information instance that can be serialized and
+          transferred between applications. The model is
+          documented using a compact and expressive interface
+          definition language, property tables, or entity
+          relationship diagrams, easing integration with existing
+          design processes and architecture tools.
+          </i>
+        </p>
+      </div>
+
+      {% capture t9 %}{% include_relative pub-histories/jadn-hist-table.md %}{% endcapture %}{{ t9 | markdownify }}  
+
+      <br /><br />
+    </div>
+
+
+<!--- Section for the Stateless Packet Filtering (SLPF) AP -->
+
+    <div class="container" id="slpf-AP">
+      <div id="splf-ap-title" class="section-title">
+        <h2>OpenC2 Actuator Profile for Stateless Packet Filtering (SLPF)</h2>
+        <p class="section-subtitle">
+          <i
+            >OpenC2 Actuator Profiles specify the subset of the OpenC2 language
+            relevant in the context of specific actuator functions. This
+            actuator profile specifies the set of actions, targets, specifiers,
+            and command arguments that integrates Stateless Packet Filtering
+            functionality with the OpenC2 command set.
+          </i>
+        </p>
+      </div>
+
+      {% capture t3 %}{% include_relative pub-histories/slpf-hist-table.md %}{% endcapture %}{{ t3 | markdownify }}  
+
+      <br /><br />
+    </div>
+
+
+<!--- Section for the Packet Filter AP -->
+
+    <div class="container" id='PF-AP'>
+      <div class="section-title">
+        <h2>OpenC2 Actuator Profile for Packet Filtering (PF)</h2>
+        <p class="section-subtitle">
+          <i >OpenC2 Actuator Profiles specify the subset of the
+          OpenC2 language relevant in the context of specific
+          actuator functions. Packet filtering is a cyber defense
+          mechanism that denies or allows traffic based on static
+          or dynamic properties of the traffic, such as address,
+          port, protocol, etc. This profile defines the Actions,
+          Targets, Specifiers and Options that are consistent
+          with the Version 1.0 of the OpenC2 Language
+          Specification in the context of packet filtering (PF).
+          </i>
+        </p>
+      </div>
+
+      {% capture t4 %}{% include_relative pub-histories/pf-hist-table.md %}{% endcapture %}{{ t4 | markdownify }}  
+
+      <br /><br />
+    </div>
+
+
+<!--- Section for the Threat Hunting AP -->
+
+<div class="container" id='TH-AP'>
+  <div class="section-title">
+    <h2>OpenC2 Actuator Profile for Threat Hunting (TH)</h2>
+    <p class="section-subtitle">
+      <i >OpenC2 Actuator Profiles specify the subset of the OpenC2 language
+      relevant in the context of specific actuator functions. This specification
+      defines an actuator profile to automate management of cyber threat hunting
+      activities using OpenC2. Threat hunting is the process of proactively and
+      iteratively searching through networks and on endpoints to detect and
+      isolate cyber observables that may indicate threats that evade existing
+      security solutions. This actuator profile defines the OpenC2 Actions,
+      Targets, Arguments, and Specifiers along with conformance clauses to
+      enable the operation of OpenC2 Producers and Consumers in the context of
+      cyber threat hunting. It covers the identification and invocation of
+      stored hunting processes (e.g., “hunt flows”), passing of hunt parameters,
+      and the expected type(s) and format(s) of information returned by hunting
+      processes.</i>
+    </p>
+  </div>
+
+  {% capture tTH %}{% include_relative pub-histories/th-hist-table.md %}{% endcapture %}{{ tTH | markdownify }}  
+
+  <br /><br />
+</div>
+
+
+<!--- Section for the MQTT Transfer Specification -->
+
+<div class="container" id="mqtt-ts">
+  <div class="section-title">
+    <h2>Specification for Transfer of OpenC2 Messages via MQTT</h2>
+    <p class="section-subtitle">
+      <i >OpenC2 transfer specifications utilize existing
+      protocols and standards to implement OpenC2 in specific
+      environments. Message Queuing Telemetry Transport
+      (MQTT) is a widely-used publish / subscribe (pub/sub)
+      transfer protocol. This specification describes the use
+      of MQTT Version 5.0 as a transfer mechanism for OpenC2
+      messages.
+      </i>
+    </p>
+  </div>
+
+  {% capture t8 %}{% include_relative pub-histories/mqtt-hist-table.md %}{% endcapture %}{{ t8 | markdownify }}  
+
+  <br /><br />
+</div>
+
+
+
+<!--- Section for the HTTPS Transfer Specification -->
+
+    <div class="container" id="https-ts">
+      <div class="section-title">
+        <h2>Specification for Transfer of OpenC2 Messages via HTTPS</h2>
+        <p class="section-subtitle">
+          <i
+            >OpenC2 transfer specifications utilize existing protocols and
+            standards to implement OpenC2 in specific environments. This
+            specification describes the use of HTTP over TLS as a transfer
+            mechanism for OpenC2 messages.
+          </i>
+        </p>
+      </div>
+
+      {% capture t7 %}{% include_relative pub-histories/https-hist-table.md %}{% endcapture %}{{ t7 | markdownify }}  
+
+      <br /><br />
+    </div>
+
+
+
+<!--- Section for the JADN Information Modeling CN -->
+
+<div class="container" id="jadn-im">
+      <div class="section-title">
+        <h2>Information Modeling With JADN</h2>
+        <p class="section-subtitle">
+          <i>Information models (IMs) are used to define and
+          generate physical data models, validate information
+          instances, and enable lossless translation across
+          data formats. JSON Abstract Data Notation (JADN) is a
+          UML-based information modeling language that defines
+          data structure independently of data format. This
+          Committee Note describes the use of IMs, explains how
+          to construct IMs using JADN, and contrasts IMs with
+          other modeling approaches, such as
+          Entity-Relationship models for databases, and
+          knowledge models / ontologies.
+          </i>
+        </p>
+      </div>
+
+      {% capture t10 %}{% include_relative pub-histories/jadn-im-cn-hist-table.md %}{% endcapture %}{{ t10 | markdownify }}  
+
+      <br /><br />
+    </div>
+
+
+<!--- Section for the Actuator Profile Development CN -->
+
+<div class="container" id='cn-apdev'>
+  <div class="section-title">
+    <h2>OpenC2 Actuator Profile Development Process Version 1.0</h2>
+    <p class="section-subtitle">
+      <i> OpenC2 Actuator Profiles (APs) specify the subset
+      of the OpenC2 language relevant in the context of specific actuator
+      functions. A profile refines the meaning of language elements used to
+      perform the actuator function, and often defines additional elements that
+      are relevant and/or unique to that function. This Committee Note describes
+      the TC’s process for using the JSON Abstract Data Notation (JADN)
+      information modeling language in the development of APs, resulting in a
+      rigorous schema for an AP properly integrated with the base OpenC2
+      language.
+      </i>
+    </p>
+  </div>
+
+  {% capture t6 %}{% include_relative pub-histories/ap-dev-cn-hist-table.md %}{% endcapture %}{{ t6 | markdownify }}  
+
+  <br /><br />
+</div>
+
+
+
+
+    <div class="container" id="table-details">
+      <div class="section-title">
+        <h2>Explanation of History Table Details</h2>
+      </div>
         <ul>
           <li>
             <b>Version</b>
@@ -71,968 +387,6 @@ permalink: /pubhist.html
             uploaded to OASIS.
           </li>
         </ul>
-        <p>
-          Tables are ordered in reverse chronological order,
-          newest version first. 
-        </p>
-        <br /><br />
-      </div>
-    </div>
-
-<!--- Section for the Architecture Specification -->
-
-<div class="container" id="arch-spec">
-  <div class="section-title">
-    <h2>OpenC2 Architecture Specification</h2>
-    <p class="section-subtitle">
-      <i>Cyber attacks are increasingly sophisticated, less
-      expensive to execute, dynamic and automated. The provision
-      of cyber defense via statically configured products
-      operating in isolation is untenable. Standardized
-      interfaces, protocols and data models will facilitate the
-      integration of the functional blocks within a system and
-      between systems. Open Command and Control (OpenC2) is a
-      concise and extensible language to enable
-      machine-to-machine communications for purposes of command
-      and control of cyber defense components, subsystems and/or
-      systems in a manner that is agnostic of the underlying
-      products, technologies, transport mechanisms or other
-      aspects of the implementation. The Architecture
-      Specification describes the abstract architecture of OpenC2
-      to define a common understanding of the messages and
-      interactions for all bindings and serializations.
-      </i>
-    </p>
-  </div>
-
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Version</th>
-        <th scope="col">Approval Level</th>
-        <th scope="col">Publication Date</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="Version">v1.0 WIP</td>
-        <td data-label="Approval Level">
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/oasis-tcs/openc2-oc2arch/blob/working/oc2arch-v1.0.md"
-            >Working Meeting: 11 May 2022</a
-          >
-        </td>
-        <td data-label="Publication Date">11 May 2022</td>
-      <tr>
-        <tr>
-          <td data-label="Version">v1.0</td>
-          <td data-label="Approval Level">
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://github.com/oasis-tcs/openc2-oc2arch/blob/working/oc2arch-v1.0.md">
-              CS01
-            </a>
-          </td>
-          <td data-label="Publication Date">30 September 2022</td>
-        <tr>
-        <tr>
-        <td data-label="Version">v1.0</td>
-        <td data-label="Approval Level">
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://docs.oasis-open.org/openc2/oc2arch/v1.0/cs01/oc2arch-v1.0-cs01.html"
-            >CSD 01</a
-          >
-        </td>
-        <td data-label="Publication Date">18 May 2022</td>
-      </tr>
-    </tbody>
-  </table>
-  <br /><br />
-</div>
-
-
-
-<!--- Section for the Language Specification -->
-
-    <div class="container" id="lang-spec">
-      <div class="section-title">
-        <h2>Open Command and Control (OpenC2) Language Specification</h2>
-        <p class="section-subtitle">
-          <i
-            >The Language Specification is an overarching OpenC2 document, which
-            defines the basic conventions of the language, the set of available
-            actions, and the base set of targets to which actions can be
-            applied. This specification provides the semantics for the essential
-            elements of the language, the structure for commands and responses,
-            and the schema that defines the proper syntax for the language
-            elements that represents the command or response.
-          </i>
-        </p>
-      </div>
-
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Version</th>
-            <th scope="col">Approval Level</th>
-            <th scope="col">Publication Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Version">v2.0 WIP</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://github.com/oasis-tcs/openc2-oc2ls/blob/working/oc2ls.md"
-                >Working Meeting: 4 January 2023</a
-              >
-            </td>
-            <td data-label="Publication Date">22 September 2021</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v2.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2ls/v2.0/csd01/oc2ls-v2.0-csd01.html"
-                >CSD 01</a
-              >
-            </td>
-            <td data-label="Publication Date">16 November 2022</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.1</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2ls/v1.1/csd01/oc2ls-v1.1-csd01.html"
-                >CSD 01</a
-              >
-            </td>
-            <td data-label="Publication Date">18 August 2021</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2ls/v1.0/cs02/oc2ls-v1.0-cs02.html"
-                >CS 02</a
-              >
-            </td>
-            <td data-label="Publication Date">24 November 2019</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2ls/v1.0/cs01/oc2ls-v1.0-cs01.html"
-                >CS 01</a
-              >
-            </td>
-            <td data-label="Publication Date">11 July 2019</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2ls/v1.0/csprd02/oc2ls-v1.0-csprd02.html"
-                >CSD 08 / PRD 02</a
-              >
-            </td>
-            <td data-label="Publication Date">04 April 2019</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2ls/v1.0/csprd01/oc2ls-v1.0-csprd01.html"
-                >CSD 07 / PRD 01</a
-              >
-            </td>
-            <td data-label="Publication Date">17 October 2018</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2ls/v1.0/csd06/oc2ls-v1.0-csd06.html"
-                >CSD 06</a
-              >
-            </td>
-            <td data-label="Publication Date">17 October 2018</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2ls/v1.0/csd05/oc2ls-v1.0-csd05.html"
-                >CSD 05</a
-              >
-            </td>
-            <td data-label="Publication Date">20 July 2018</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2ls/v1.0/csd04/oc2ls-v1.0-csd04.html"
-                >CSD 04</a
-              >
-            </td>
-            <td data-label="Publication Date">31 May 2018</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2ls/v1.0/csd03/oc2ls-v1.0-csd03.html"
-                >CSD 03</a
-              >
-            </td>
-            <td data-label="Publication Date">03 April 2018</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2ls/v1.0/csd02/oc2ls-v1.0-csd02.html"
-                >CSD 02</a
-              >
-            </td>
-            <td data-label="Publication Date">14 February 2018</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2ls/v1.0/csd01/oc2ls-v1.0-csd01.html"
-                >CSD 01</a
-              >
-            </td>
-            <td data-label="Publication Date">14 November 2017</td>
-          </tr>
-        </tbody>
-      </table>
-      <br /><br />
-    </div>
-
-
-
-
-<!--- Section for the Stateless Packet Filtering (SLPF) AP -->
-
-
-
-    <div class="container" id="slpf AP">
-      <div class="section-title">
-        <h2>OpenC2 Actuator Profile for Stateless Packet Filtering (SLPF)</h2>
-        <p class="section-subtitle">
-          <i
-            >OpenC2 Actuator Profiles specify the subset of the OpenC2 language
-            relevant in the context of specific actuator functions. This
-            actuator profile specifies the set of actions, targets, specifiers,
-            and command arguments that integrates Stateless Packet Filtering
-            functionality with the OpenC2 command set.
-          </i>
-        </p>
-      </div>
-
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Version</th>
-            <th scope="col">Approval Level</th>
-            <th scope="col">Publication Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Version">v1.x WIP</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://github.com/oasis-tcs/openc2-apsc-stateless-packet-filter/blob/working/oc2slpf.md"
-                >16 October 2020</a
-              >
-            </td>
-            <td data-label="Publication Date">16 October 2020</td>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2slpf/v1.0/oc2slpf-v1.0.html"
-                >CS 01</a
-              >
-            </td>
-            <td data-label="Publication Date">11 July 2019</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2slpf/v1.0/csprd03/oc2slpf-v1.0-csprd03.html"
-                >CSD 06 / PRD 03</a
-              >
-            </td>
-            <td data-label="Publication Date">31 May 2019</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2slpf/v1.0/csprd02/oc2slpf-v1.0-csprd02.html"
-                >CSD 05 / PRD 02</a
-              >
-            </td>
-            <td data-label="Publication Date">04 April 2019</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2slpf/v1.0/csprd01/oc2slpf-v1.0-csprd01.html"
-                >CSD 04 / PRD 01</a
-              >
-            </td>
-            <td data-label="Publication Date">17 October 2018</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2slpf/v1.0/csd03/oc2slpf-v1.0-csd03.html"
-                >CSD 03</a
-              >
-            </td>
-            <td data-label="Publication Date">04 October 2018</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2slpf/v1.0/csd02/oc2slpf-v1.0-csd02.html"
-                >CSD 02</a
-              >
-            </td>
-            <td data-label="Publication Date">20 July 2018</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/oc2slpf/v1.0/csd01/oc2slpf-v1.0-csd01.html"
-                >CSD 01</a
-              >
-            </td>
-            <td data-label="Publication Date">31 May 2018</td>
-          </tr>
-        </tbody>
-      </table>
-      <br /><br />
-    </div>
-
-
-<!--- Section for the Packet Filter AP -->
-
-    <div class="container" id='PF AP'>
-      <div class="section-title">
-        <h2>OpenC2 Actuator Profile for Packet Filtering (PF)</h2>
-        <p class="section-subtitle">
-          <i >OpenC2 Actuator Profiles specify the subset of the
-          OpenC2 language relevant in the context of specific
-          actuator functions. Packet filtering is a cyber defense
-          mechanism that denies or allows traffic based on static
-          or dynamic properties of the traffic, such as address,
-          port, protocol, etc. This profile defines the Actions,
-          Targets, Specifiers and Options that are consistent
-          with the Version 1.0 of the OpenC2 Language
-          Specification in the context of packet filtering (PF).
-          </i>
-        </p>
-      </div>
-
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Version</th>
-            <th scope="col">Approval Level</th>
-            <th scope="col">Publication Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Version">v1.0 WIP</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://github.com/oasis-tcs/openc2-ap-pf/blob/working/oc2pf.md"
-                >Working Meeting: 8 Septenber 2021</a
-              >
-            </td>
-            <td data-label="Publication Date">8 September 2021</td>
-          <tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/ap-pf/v1.0/csd01/ap-pf-v1.0-csd01.html"
-                >CSD 01</a
-              >
-            </td>
-            <td data-label="Publication Date">21 July 2021</td>
-          </tr>
-        </tbody>
-      </table>
-      <br /><br />
-    </div>
-
-<!--- Section for the Posture Attribute Collection AP -->
-
-<div class="container" id='PAC AP'>
-  <div class="section-title">
-    <h2>OpenC2 Actuator Profile for Posture Attribute Collection (PAC)</h2>
-    <p class="section-subtitle">
-      <i> This specification defines an actuator profile to
-      automate collection of security posture attributes from
-      virtual and physical computing resources using OpenC2.
-      Security Posture Attribute Collection (PAC) supports
-      security automation by providing mechanisms to collect and
-      aggregate the configuration and status of network
-      components for use in situational awareness, security
-      posture evaluation, and response actions. This actuator
-      profile defines the OpenC2 Actions, Targets, Arguments, and
-      Specifiers along with conformance clauses to enable the
-      operation of OpenC2 Producers and Consumers in the context
-      of PAC. It covers identification of computing resources,
-      definition of security-relevant resource attributes, and
-      controlling the collection of those attributes using direct
-      pull or event-based push mechanisms.
-      </i>
-    </p>
-  </div>
-
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Version</th>
-        <th scope="col">Approval Level</th>
-        <th scope="col">Publication Date</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="Version">v1.0 WIP</td>
-        <td data-label="Approval Level">
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/oasis-tcs/openc2-ap-pac/blob/working/ap-pac.md"
-            >Working Meeting: 18 May 2022</a
-          >
-        </td>
-        <td data-label="Publication Date">18 May 2022</td>
-      <tr>
-    </tbody>
-  </table>
-  <br /><br />
-</div>
-
-<!--- Section for the Actuator Profile Development CN -->
-
-<div class="container" id='cn-apdev'>
-  <div class="section-title">
-    <h2>OpenC2 Actuator Profile Development Process Version 1.0</h2>
-    <p class="section-subtitle">
-      <i> OpenC2 Actuator Profiles (APs) specify the subset
-      of the OpenC2 language relevant in the context of specific actuator
-      functions. A profile refines the meaning of language elements used to
-      perform the actuator function, and often defines additional elements that
-      are relevant and/or unique to that function. This Committee Note describes
-      the TC’s process for using the JSON Abstract Data Notation (JADN)
-      information modeling language in the development of APs, resulting in a
-      rigorous schema for an AP properly integrated with the base OpenC2
-      language.
-      </i>
-    </p>
-  </div>
-
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Version</th>
-        <th scope="col">Approval Level</th>
-        <th scope="col">Publication Date</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="Version">v1.0 WIP</td>
-        <td data-label="Approval Level">
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/oasis-tcs/openc2-cn-apdev/tree/working"
-            >Working Meeting: 8 Nov 2023</a
-          >
-        </td>
-        <td data-label="Publication Date">10 Nov 2023</td>
-      <tr>
-      <tr>
-        <td data-label="Version">v1.0</td>
-        <td data-label="Approval Level">
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://docs.oasis-open.org/openc2/cn-appdev/v1.0/cn01/cn-appdev-v1.0-cn01.html">CN01</a>
-        </td>
-        <td data-label="Publication Date">17 January 2024</td>
-      <tr>
-    </tbody>
-  </table>
-  <br /><br />
-</div>
-
-
-
-<!--- Section for the HTTPS Transfer Specification -->
-
-
-
-    <div class="container" id="https ts">
-      <div class="section-title">
-        <h2>Specification for Transfer of OpenC2 Messages via HTTPS</h2>
-        <p class="section-subtitle">
-          <i
-            >OpenC2 transfer specifications utilize existing protocols and
-            standards to implement OpenC2 in specific environments. This
-            specification describes the use of HTTP over TLS as a transfer
-            mechanism for OpenC2 messages.
-          </i>
-        </p>
-      </div>
-
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Version</th>
-            <th scope="col">Approval Level</th>
-            <th scope="col">Publication Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Version">v1.1 WIP</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://github.com/oasis-tcs/openc2-impl-https/blob/working/open-impl-https.md"
-                >Working Meeting: 8 Septenber 2021</a
-              >
-            </td>
-            <td data-label="Publication Date">8 September 2021</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.1</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/open-impl-https/v1.1/cs01/open-impl-https-v1.1-cs01.html"
-                >CS 01</a
-              >
-            </td>
-            <td data-label="Publication Date">30 November 2021</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.1</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/open-impl-https/v1.1/csd01/open-impl-https-v1.1-csd01.html"
-                >CSD 01</a> (public review)
-            </td>
-            <td data-label="Publication Date">15 September 2021</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/open-impl-https/v1.0/open-impl-https-v1.0.html"
-                >CS 01</a
-              >
-            </td>
-            <td data-label="Publication Date">11 July 2019</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/open-impl-https/v1.0/csprd03/open-impl-https-v1.0-csprd03.html"
-                >CSD 05 / PRD 03</a
-              >
-            </td>
-            <td data-label="Publication Date">21 May 2019</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/open-impl-https/v1.0/csprd02/open-impl-https-v1.0-csprd02.html"
-                >CSD 04 / PRD 02</a
-              >
-            </td>
-            <td data-label="Publication Date">04 April 2019</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/open-impl-https/v1.0/csprd01/open-impl-https-v1.0-csprd01.html"
-                >CSD 03 / PRD 01</a
-              >
-            </td>
-            <td data-label="Publication Date">17 October 2018</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/open-impl-https/v1.0/csd02/open-impl-https-v1.0-csd02.html"
-                >CSD 02</a
-              >
-            </td>
-            <td data-label="Publication Date">04 October 2018</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/open-impl-https/v1.0/csd01/open-impl-https-v1.0-csd01.html"
-                >CSD 01</a
-              >
-            </td>
-            <td data-label="Publication Date">23 August 2018</td>
-          </tr>
-        </tbody>
-      </table>
-      <br /><br />
-    </div>
-
-
-
-    <div class="container" id="mqtt ts">
-      <div class="section-title">
-        <h2>Specification for Transfer of OpenC2 Messages via MQTT</h2>
-        <p class="section-subtitle">
-          <i >OpenC2 transfer specifications utilize existing
-          protocols and standards to implement OpenC2 in specific
-          environments. Message Queuing Telemetry Transport
-          (MQTT) is a widely-used publish / subscribe (pub/sub)
-          transfer protocol. This specification describes the use
-          of MQTT Version 5.0 as a transfer mechanism for OpenC2
-          messages.
-          </i>
-        </p>
-      </div>
-
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Version</th>
-            <th scope="col">Approval Level</th>
-            <th scope="col">Publication Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Version">v1.0 WIP</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://github.com/oasis-tcs/openc2-transf-mqtt/blob/working/transf-mqtt-v1.0.md"
-                >Working Meeting: 13 October 2021</a
-              >
-            </td>
-            <td data-label="Publication Date">13 October 2021</td>
-          <tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/transf-mqtt/v1.0/cs01/transf-mqtt-v1.0-cs01.html"
-                >CS 01</a>
-            </td>
-            <td data-label="Publication Date">19 November 2021</td>
-          <tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/transf-mqtt/v1.0/csd04/transf-mqtt-v1.0-csd04.html"
-                >CSD 04</a> (public review)
-            </td>
-            <td data-label="Publication Date">18 August 2021</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/transf-mqtt/v1.0/csd03/transf-mqtt-v1.0-csd03.html"
-                >CSD 03</a
-              >
-            </td>
-            <td data-label="Publication Date">17 February 2021</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/transf-mqtt/v1.0/csd02/transf-mqtt-v1.0-csd02.html"
-                >CSD 02</a
-              >
-            </td>
-            <td data-label="Publication Date">24 September 2020</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/transf-mqtt/v1.0/csd01/transf-mqtt-v1.0-csd01.html"
-                >CSD 01</a
-              >
-            </td>
-            <td data-label="Publication Date">07 July 2020</td>
-          </tr>
-        </tbody>
-      </table>
-      <br /><br />
-    </div>
-
-
-
-    <div class="container" id="jadn">
-      <div class="section-title">
-        <h2>Specification for JSON Abstract Data Notation (JADN)</h2>
-        <p class="section-subtitle">
-          <i>JSON Abstract Data Notation (JADN) is a UML-based
-          information modeling language that defines data
-          structure independently of data format. Information
-          models are used to define and generate physical data
-          models, validate information instances, and enable
-          lossless translation across data formats. A JADN
-          specification consists of two parts: type definitions
-          that comprise the information model, and serialization
-          rules that define how information instances are
-          represented as data. The information model is itself an
-          information instance that can be serialized and
-          transferred between applications. The model is
-          documented using a compact and expressive interface
-          definition language, property tables, or entity
-          relationship diagrams, easing integration with existing
-          design processes and architecture tools.
-          </i>
-        </p>
-      </div>
-
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Version</th>
-            <th scope="col">Approval Level</th>
-            <th scope="col">Publication Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Version">v1.X WIP</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://github.com/oasis-tcs/openc2-jadn/blob/working/jadn-v1.0-wd02.md"
-                >Working Meeting: 16 June 2021</a
-              >
-            </td>
-            <td data-label="Publication Date">16 June 2021</td>
-          <tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/jadn/v1.0/cs01/jadn-v1.0-cs01.html"
-                >CS 01</a
-              >
-            </td>
-            <td data-label="Publication Date">17 August 2021</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/jadn/v1.0/csd02/jadn-v1.0-csd02.html"
-                >CSD 02</a> (public review)
-            </td>
-            <td data-label="Publication Date">16 June 2021</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/jadn/v1.0/csd01/jadn-v1.0-csd01.html"
-                >CSD 01</a> (public review)
-            </td>
-            <td data-label="Publication Date">21 October 2020</td>
-          </tr>
-        </tbody>
-      </table>
-      <br /><br />
-    </div>
-
-
-    <div class="container" id="jadn-im">
-      <div class="section-title">
-        <h2>Information Modeling With JADN</h2>
-        <p class="section-subtitle">
-          <i>Information models (IMs) are used to define and
-          generate physical data models, validate information
-          instances, and enable lossless translation across
-          data formats. JSON Abstract Data Notation (JADN) is a
-          UML-based information modeling language that defines
-          data structure independently of data format. This
-          Committee Note describes the use of IMs, explains how
-          to construct IMs using JADN, and contrasts IMs with
-          other modeling approaches, such as
-          Entity-Relationship models for databases, and
-          knowledge models / ontologies.
-          </i>
-        </p>
-      </div>
-
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Version</th>
-            <th scope="col">Approval Level</th>
-            <th scope="col">Publication Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Version">v1.X WIP</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://github.com/oasis-tcs/openc2-jadn-im/blob/working/imjadn-v1.0-cn01.md"
-                >Working Meeting: 12 April 2023</a
-              >
-            </td>
-            <td data-label="Publication Date">12 April 2023</td>
-          <tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/imjadn/v1.0/imjadn-v1.0.html"
-                >CN 01</a
-              >
-            </td>
-            <td data-label="Publication Date">19 April 2023</td>
-          </tr>
-          <tr>
-            <td data-label="Version">v1.0</td>
-            <td data-label="Approval Level">
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://docs.oasis-open.org/openc2/imjadn/v1.0/cnd01/imjadn-v1.0-cnd01.html"
-                >CND 01</a> 
-            </td>
-            <td data-label="Publication Date">18 January 2023</td>
-          </tr>
-        </tbody>
-      </table>
-      <br /><br />
     </div>
   </section>
 </main>
