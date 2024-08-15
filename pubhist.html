@@ -5,6 +5,7 @@ pageHeading: Publication History
 permalink: /pubhist.html
 ---
 
+
 <main id="main">
   <section>
     <div class="container" id="introduction">
@@ -391,3 +392,39 @@ permalink: /pubhist.html
     </div>
   </section>
 </main>
+
+<script>
+
+  // experiment to compensate for page header when jumping to anchors
+  // code from https://www.geeksforgeeks.org/offsetting-an-anchor-to-adjust-for-fixed-header/?ref=gcse_ind
+  // this is their option 2 for addressing this visual glitch
+  
+    // Get the header element
+    let header = document.querySelector('header');
+  
+    // Get the height of the header
+    let headerHeight = header.offsetHeight;
+    document.querySelectorAll('a[href^="#"]')
+    .forEach(function (anchor) {
+        anchor.addEventListener('click', 
+        function (event) {
+            event.preventDefault();
+  
+            // Get the target element that 
+            // the anchor link points to
+            let target = document.querySelector(
+                this.getAttribute('href')
+            );
+            
+            let targetPosition = target
+                .getBoundingClientRect().top - headerHeight;
+  
+            window.scrollTo({
+                top: targetPosition + window.pageYOffset,
+                behavior: 'smooth'
+            });
+        });
+    });
+  </script>
+  
+  
